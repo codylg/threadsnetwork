@@ -361,3 +361,49 @@ embed, iframe, object { max-width: 100%; }
 .gallery-columns-9 .gallery-item { max-width: 11.11%; }
 
 .gallery-caption { display: block; }
+
+.site-header, .site-content, .site-footer { max-width: 1500px; padding: 0 30px; margin: 0 auto; }
+
+body { background-color: #fbfafc; }
+
+.grey-text { color: #6f6c73; }
+
+.content-thumbnails { display: flex; flex-direction: row; flex-wrap: wrap; margin: -5px; }
+
+.content-thumbnail { position: relative; flex-basis: 30%; flex-grow: 1; margin: 5px; margin-bottom: 30px; font-size: 0; }
+
+.content-thumbnail img.wp-post-image { width: 100%; border-radius: 2px; }
+
+.content-thumbnail .post-thumbnail + .entry-details, .content-thumbnail .wp-post-image + .entry-details { margin-top: -30px; }
+
+.content-thumbnail .entry-details { width: 100%; max-width: 640px; padding: 0 30px; }
+
+.content-thumbnail .entry-title { margin: 0; font-family: "Gastromond"; font-size: 36px; }
+
+.content-thumbnail .entry-title a { padding: 9px 0; background-color: #fbfafc; text-decoration: none; color: #443e4e; }
+
+.content-thumbnail .entry-content { max-width: 420px; }
+
+.content-thumbnail .entry-content p { margin: 0; font-family: "Mrs Eaves OT"; font-size: 20px; line-height: 1.4em; }
+
+.content-thumbnail .entry-content .read-more { font-family: "Roboto Mono", "Courier New", mono; font-size: 14px; text-decoration: none; }
+
+.content-thumbnail .entry-categories { position: absolute; top: 0; left: 0; padding: 30px; font-family: "Roboto Mono", "Courier New", mono; font-size: 14px; }
+
+.content-thumbnail .entry-categories a { background-color: #fbfafc; text-decoration: none; color: #6f6c73; }
+
+.home-page-content .content-thumbnail:nth-child(1) { flex-basis: 100%; margin-bottom: 5px; }
+
+.home-page-content .content-thumbnail:nth-child(1) .entry-details { position: absolute; top: 0; padding: 60px; margin-top: 0; }
+
+.home-page-content .content-thumbnail:nth-child(1) .entry-title { font-size: 60px; line-height: 1.4em; }
+
+.home-page-content .content-thumbnail:nth-child(1) .entry-content { margin-top: 30px; }
+
+.home-page-content .content-thumbnail:nth-child(1) .entry-content p { display: inline; background-color: #fbfafc; }
+
+.home-page-content .content-thumbnail:nth-child(1) .entry-categories { right: 0; left: auto; padding: 60px; }
+
+.mid-content-list-newsletter-prompt { flex-basis: 100%; padding: 60px; margin: 60px 0 90px; border-radius: 10px; background-color: white; box-shadow: 0 30px 60px rgba(68, 62, 78, 0.2); }
+
+.site-footer { padding-top: 100px; padding-bottom: 100px; background-color: #443e4e; color: #aba4b4; }

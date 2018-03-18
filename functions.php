@@ -41,6 +41,34 @@ if ( ! function_exists( 'threadsnetwork_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		set_post_thumbnail_size( 800, 800, true );
+		add_image_size( 'thumb-large', 1400, 1000, true );
+
+		/**
+		 * Filter the except length to 20 words.
+		 *
+		 * @param int $length Excerpt length.
+		 * @return int (Maybe) modified excerpt length.
+		 */
+		function wpdocs_custom_excerpt_length( $length ) {
+		    return 33;
+		}
+		add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
+		/**
+		 * Filter the "read more" excerpt string link to the post.
+		 *
+		 * @param string $more "Read more" excerpt string.
+		 * @return string (Maybe) modified "read more" excerpt string.
+		 */
+		function wpdocs_excerpt_more( $more ) {
+		    return sprintf( '&hellip; <a class="read-more grey-text" href="%1$s">%2$s</a>',
+		        get_permalink( get_the_ID() ),
+		        __( 'Continue&nbsp;reading', 'textdomain' )
+		    );
+		}
+		add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -158,4 +186,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-

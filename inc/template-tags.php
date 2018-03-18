@@ -75,6 +75,23 @@ if ( ! function_exists( 'threadsnetwork_entry_footer' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'threadsnetwork_entry_categories' ) ) :
+	/**
+	 * Prints HTML with meta information for the categories, tags and comments.
+	 */
+	function threadsnetwork_entry_categories() {
+		// Hide category and tag text for pages.
+		if ( 'post' === get_post_type() ) {
+			/* translators: used between list items, there is a space after the comma */
+			$categories_list = get_the_category_list( esc_html__( ' ', 'threadsnetwork' ) );
+			if ( $categories_list ) {
+				/* translators: 1: list of categories. */
+				printf( '<span class="cat-links">' . esc_html__( '%1$s', 'threadsnetwork' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			}
+		}
+	}
+endif;
+
 if ( ! function_exists( 'threadsnetwork_post_thumbnail' ) ) :
 	/**
 	 * Displays an optional post thumbnail.
