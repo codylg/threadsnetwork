@@ -20,6 +20,7 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 /*-------------------------------------------------------------- >>> TABLE OF CONTENTS: ---------------------------------------------------------------- # Normalize # Typography # Elements # Forms # Navigation ## Links ## Menus # Accessibility # Alignments # Clearings # Widgets # Content ## Posts and pages ## Comments # Infinite scroll # Media ## Captions ## Galleries --------------------------------------------------------------*/
+@import url("https://use.typekit.net/vxf0umh.css");
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -134,25 +135,7 @@ template { display: none; }
 --------------------------------------------------------------*/
 body, button, input, select, optgroup, textarea { color: #404040; font-family: sans-serif; font-size: 16px; font-size: 1rem; line-height: 1.5; }
 
-h1, h2, h3, h4, h5, h6 { clear: both; }
-
-p { margin-bottom: 1.5em; }
-
-dfn, cite, em, i { font-style: italic; }
-
 blockquote { margin: 0 1.5em; }
-
-address { margin: 0 0 1.5em; }
-
-pre { background: #eee; font-family: "Courier 10 Pitch", Courier, monospace; font-size: 15px; font-size: 0.9375rem; line-height: 1.6; margin-bottom: 1.6em; max-width: 100%; overflow: auto; padding: 1.6em; }
-
-code, kbd, tt, var { font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace; font-size: 15px; font-size: 0.9375rem; }
-
-abbr, acronym { border-bottom: 1px dotted #666; cursor: help; }
-
-mark, ins { background: #fff9c0; text-decoration: none; }
-
-big { font-size: 125%; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -206,15 +189,11 @@ textarea { width: 100%; }
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a { color: royalblue; }
+a { color: #443e4e; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); text-decoration: none; }
 
-a:visited { color: purple; }
+a:visited { color: inherit; }
 
-a:hover, a:focus, a:active { color: midnightblue; }
-
-a:focus { outline: thin dotted; }
-
-a:hover, a:active { outline: 0; }
+a:hover, a:focus, a:active { color: #28262a; }
 
 /*--------------------------------------------------------------
 ## Menus
@@ -362,15 +341,49 @@ embed, iframe, object { max-width: 100%; }
 
 .gallery-caption { display: block; }
 
-.site-header, .site-content, .site-footer { max-width: 1500px; padding: 0 30px; margin: 0 auto; }
+#wpadminbar { display: none; }
 
-body { background-color: #fbfafc; }
+html[lang] { margin-top: 0 !important; }
+
+::selection { background-color: #443e4e; text-shadow: none; color: white; }
+
+html { font-size: 62.5%; }
+
+body { width: 100vw; max-width: 100%; margin: 0; background-color: #fbfafc; font-family: "mr-eaves-sans", sans-serif; font-weight: 400; font-size: 1.6rem; color: #443e4e; -webkit-tap-highlight-color: transparent; }
 
 .grey-text { color: #6f6c73; }
 
-.content-thumbnails { display: flex; flex-direction: row; flex-wrap: wrap; margin: -5px; }
+h1, h2 { font-family: "mrs-eaves-xl-serif-narrow", Georgia, serif; font-weight: 800; color: #443e4e; }
 
-.content-thumbnail { position: relative; flex-basis: 30%; flex-grow: 1; margin: 5px; margin-bottom: 30px; font-size: 0; }
+h1, h2.big { font-size: 6rem; line-height: 1.4em; }
+
+h2 { font-size: 3.6rem; line-height: 1.4em; }
+
+h3, h4, h5, h6 { font-family: "mr-eaves-sans", sans-serif; font-weight: 800; color: #443e4e; }
+
+h3 { font-size: 3rem; }
+
+p { font-family: "mrs-eaves", Georgia, serif; font-size: 20px; line-height: 1.4em; letter-spacing: -0.01em; }
+
+.site-header, .site-content, .site-footer { max-width: 1500px; padding: 0 30px; margin: 0 auto; }
+
+.site-header { position: relative; z-index: 2; display: flex; width: 100%; padding-top: 60px; }
+
+.site-header .site-branding { flex-shrink: 0; }
+
+.site-header h1.site-title { margin: 0; margin-bottom: -0.52em; font-size: 9rem; }
+
+.site-header ul.nav-menu { display: flex; justify-content: flex-end; }
+
+.site-header ul.nav-menu li { float: none; margin-top: 20px; margin-left: 15px; font-family: "mr-eaves-sans", sans-serif; }
+
+.site-header ul.nav-menu li a { color: #aba4b4; }
+
+.site-header ul.nav-menu li a:hover { color: #443e4e; }
+
+.content-thumbnails { display: flex; flex-direction: row; flex-wrap: wrap; margin: -7px; }
+
+.content-thumbnail { position: relative; flex-basis: 30%; flex-grow: 1; margin: 7px; margin-bottom: 30px; font-size: 0; }
 
 .content-thumbnail img.wp-post-image { width: 100%; border-radius: 2px; }
 
@@ -378,32 +391,62 @@ body { background-color: #fbfafc; }
 
 .content-thumbnail .entry-details { width: 100%; max-width: 640px; padding: 0 30px; }
 
-.content-thumbnail .entry-title { margin: 0; font-family: "Gastromond"; font-size: 36px; }
+.content-thumbnail .entry-title { margin: 0; }
 
-.content-thumbnail .entry-title a { padding: 9px 0; background-color: #fbfafc; text-decoration: none; color: #443e4e; }
+.content-thumbnail .entry-title a { padding: 9px 0; background-color: #fbfafc; }
 
 .content-thumbnail .entry-content { max-width: 420px; }
 
-.content-thumbnail .entry-content p { margin: 0; font-family: "Mrs Eaves OT"; font-size: 20px; line-height: 1.4em; }
+.content-thumbnail .entry-content p { margin: 0; }
 
-.content-thumbnail .entry-content .read-more { font-family: "Roboto Mono", "Courier New", mono; font-size: 14px; text-decoration: none; }
+.content-thumbnail .entry-content .read-more { font-family: "mr-eaves-sans", sans-serif; font-size: 14px; color: #aba4b4; }
 
-.content-thumbnail .entry-categories { position: absolute; top: 0; left: 0; padding: 30px; font-family: "Roboto Mono", "Courier New", mono; font-size: 14px; }
+.content-thumbnail .entry-content .read-more:hover { color: #443e4e; }
 
-.content-thumbnail .entry-categories a { background-color: #fbfafc; text-decoration: none; color: #6f6c73; }
+.content-thumbnail .entry-categories { position: absolute; top: 0; left: 0; padding: 30px; }
 
-.home-page-content .content-thumbnail:nth-child(1) { flex-basis: 100%; margin-bottom: 5px; }
+.content-thumbnail-large { flex-basis: 100%; margin-bottom: 7px; }
 
-.home-page-content .content-thumbnail:nth-child(1) .entry-details { position: absolute; top: 0; padding: 60px; margin-top: 0; }
+.content-thumbnail-large .entry-details { position: absolute; top: 0; padding: 60px; padding-top: 120px; margin-top: 0; }
 
-.home-page-content .content-thumbnail:nth-child(1) .entry-title { font-size: 60px; line-height: 1.4em; }
+.content-thumbnail-large .entry-content { margin-top: 30px; }
 
-.home-page-content .content-thumbnail:nth-child(1) .entry-content { margin-top: 30px; }
+.content-thumbnail-large .entry-content p { display: inline; background-color: #fbfafc; }
 
-.home-page-content .content-thumbnail:nth-child(1) .entry-content p { display: inline; background-color: #fbfafc; }
+.content-thumbnail-large .cat-links { margin-bottom: 30px; }
 
-.home-page-content .content-thumbnail:nth-child(1) .entry-categories { right: 0; left: auto; padding: 60px; }
+.cat-links { display: block; font-family: "mr-eaves-sans", sans-serif; font-size: 14px; }
 
-.mid-content-list-newsletter-prompt { flex-basis: 100%; padding: 60px; margin: 60px 0 90px; border-radius: 10px; background-color: white; box-shadow: 0 30px 60px rgba(68, 62, 78, 0.2); }
+.cat-links a { background-color: #fbfafc; color: #6f6c73; }
 
-.site-footer { padding-top: 100px; padding-bottom: 100px; background-color: #443e4e; color: #aba4b4; }
+.cat-links a:hover { color: #443e4e; }
+
+.mid-content-list-newsletter-prompt { flex-basis: 100%; padding: 60px 90px; margin: 60px 0 90px; border-radius: 2px; background-color: #f0eff2; }
+
+.mid-content-list-newsletter-prompt h3 { max-width: 180px; margin-right: 90px; margin-top: 0; }
+
+.mid-content-list-newsletter-prompt .newsletter-signup-form-details { display: flex; justify-content: center; }
+
+.mid-content-list-newsletter-prompt .newsletter-signup-form-details > div { flex-grow: 1; max-width: 400px; }
+
+.mid-content-list-newsletter-prompt .newsletter-signup-form-details input { width: 100%; }
+
+input, input[type="text"], input[type="email"], input[type="search"], input[type="submit"] { padding: 0; margin: 0; border: 0; border-radius: 0; background-color: transparent; font-family: "mr-eaves-sans", sans-serif; font-size: 1.6rem; color: #443e4e; outline: none; -webkit-appearance: none; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
+
+input::placeholder, input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="search"]::placeholder, input[type="submit"]::placeholder { color: #aba4b4; }
+
+input[type="text"], input[type="email"], input[type="search"] { display: block; padding-bottom: 3px; border-bottom: 2px solid #aba4b4; }
+
+input[type="text"]:hover, input[type="email"]:hover, input[type="search"]:hover { border-bottom-color: #6f6c73; }
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="search"]:focus { border-bottom-color: #443e4e; }
+
+input[type="text"] + input, input[type="email"] + input, input[type="search"] + input { margin-top: 24px; }
+
+input[type="submit"] { font-weight: 700; font-size: 1.4rem; line-height: 1.4em; color: #585262; cursor: pointer; }
+
+input[type="submit"]:hover { color: #443e4e; }
+
+.site-footer { padding-bottom: 30px; color: #aba4b4; }
+
+.site-footer .site-footer-content { padding: 90px 30px; border-radius: 2px; background-color: #443e4e; }

@@ -27,9 +27,7 @@
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
-				<?php
-				the_excerpt()
-				?>
+				<?php the_excerpt() ?>
 			</div>
 
 		</div>

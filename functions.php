@@ -45,13 +45,13 @@ if ( ! function_exists( 'threadsnetwork_setup' ) ) :
 		add_image_size( 'thumb-large', 1400, 1000, true );
 
 		/**
-		 * Filter the except length to 20 words.
+		 * Filter the except length.
 		 *
 		 * @param int $length Excerpt length.
 		 * @return int (Maybe) modified excerpt length.
 		 */
 		function wpdocs_custom_excerpt_length( $length ) {
-		    return 33;
+		    return 24;
 		}
 		add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
@@ -63,7 +63,7 @@ if ( ! function_exists( 'threadsnetwork_setup' ) ) :
 		 * @return string (Maybe) modified "read more" excerpt string.
 		 */
 		function wpdocs_excerpt_more( $more ) {
-		    return sprintf( '&hellip; <a class="read-more grey-text" href="%1$s">%2$s</a>',
+		    return sprintf( '&hellip; <a class="read-more" href="%1$s">%2$s</a>',
 		        get_permalink( get_the_ID() ),
 		        __( 'Continue&nbsp;reading', 'textdomain' )
 		    );
@@ -74,6 +74,13 @@ if ( ! function_exists( 'threadsnetwork_setup' ) ) :
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'threadsnetwork' ),
 		) );
+
+
+		add_filter( 'wp_nav_menu_items','add_search_box', 10, 2 );
+			function add_search_box( $items, $args ) {
+			$items .= '<li>' . get_search_form( false ) . '</li>';
+			return $items;
+		}
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments

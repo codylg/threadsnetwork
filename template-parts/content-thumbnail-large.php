@@ -9,10 +9,9 @@
 
 ?>
 
-<div class="content-thumbnail">
+<div class="content-thumbnail content-thumbnail-large">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<!-- <?php threadsnetwork_post_thumbnail(); ?> -->
 		<?php the_post_thumbnail('thumb-large'); ?>
 
 		<div class="entry-details">
@@ -22,21 +21,16 @@
 				if ( is_singular() ) :
 					the_title( '<h1 class="entry-title">', '</h1>' );
 				else :
-					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+					the_title( '<h2 class="entry-title big"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 				endif;
 	 			?>
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
-				<?php
-				the_excerpt()
-				?>
+				<?php threadsnetwork_entry_categories(); ?>
+				<?php the_excerpt() ?>
 			</div>
 
-		</div>
-
-		<div class="entry-categories">
-			<?php threadsnetwork_entry_categories(); ?>
 		</div>
 
 	</article><!-- #post-<?php the_ID(); ?> -->
