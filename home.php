@@ -43,14 +43,23 @@ get_header();
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
 
-				if( $wp_query->current_post == 0  ):
-					get_template_part( 'template-parts/content-thumbnail-large', get_post_type() );
-				else :
-					get_template_part( 'template-parts/content-thumbnail', get_post_type() );
-				endif;
+				 if( $wp_query->current_post == 0 || $wp_query->current_post == 3 ):
+ 						if( $wp_query->current_post == 3 ):
+ 							?>
+ 							</div>
+ 							<?php
+ 						endif;
+ 						?>
+ 						<div class="content-list-three-combo">
+ 						<?php
+ 						get_template_part( 'template-parts/content-thumbnail-large', get_post_type() );
+ 				else :
+ 					get_template_part( 'template-parts/content-thumbnail', get_post_type() );
+ 		    endif;
 
-				if( $wp_query->current_post == 6  ):
+				if( $wp_query->current_post == 5  ):
 						?>
+						</div>
 						<div class="mid-content-list-newsletter-prompt">
 						<?php
 						get_template_part( 'template-parts/newsletter-signup-form' );
