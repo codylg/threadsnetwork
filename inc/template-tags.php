@@ -43,7 +43,7 @@ if ( ! function_exists( 'threadsnetwork_posted_by' ) ) :
 		$byline = sprintf(
 			/* translators: %s: post author. */
 			esc_html_x( 'by %s', 'post author', 'threadsnetwork' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+			'<span class="author vcard"><a class="url fn n underline-link" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
 		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
@@ -58,13 +58,6 @@ if ( ! function_exists( 'threadsnetwork_entry_footer' ) ) :
 	function threadsnetwork_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'threadsnetwork' ) );
-			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'threadsnetwork' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-			}
-
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'threadsnetwork' ) );
 			if ( $tags_list ) {
@@ -83,7 +76,7 @@ if ( ! function_exists( 'threadsnetwork_entry_categories' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ' ', 'threadsnetwork' ) );
+			$categories_list = get_the_category_list( esc_html__( ', ', 'threadsnetwork' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
 				printf( '<span class="cat-links">' . esc_html__( '%1$s', 'threadsnetwork' ) . '</span>', $categories_list ); // WPCS: XSS OK.
