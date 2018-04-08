@@ -44,21 +44,28 @@ get_header();
 				 */
 
 				 if( $wp_query->current_post == 0 || $wp_query->current_post == 3 ):
- 						if( $wp_query->current_post == 3 ):
- 							?>
- 							</div>
- 							<?php
- 						endif;
- 						?>
- 						<div class="content-list-three-combo">
- 						<?php
- 						get_template_part( 'template-parts/content-thumbnail-large', get_post_type() );
+					if( $wp_query->current_post == 3 ):
+						?>
+						</div>
+						</div>
+						<?php
+					endif;
+					?>
+					<div class="content-list-three-combo">
+					<?php
+					get_template_part( 'template-parts/content-thumbnail-large', get_post_type() );
+ 				elseif( $wp_query->current_post == 1 || $wp_query->current_post == 4 ):
+					?>
+					<div class="content-list-two-stacked">
+					<?php
+					get_template_part( 'template-parts/content-thumbnail', get_post_type() );
  				else :
  					get_template_part( 'template-parts/content-thumbnail', get_post_type() );
  		    endif;
 
 				if( $wp_query->current_post == 5  ):
 						?>
+						</div>
 						</div>
 						<div class="mid-content-list-newsletter-prompt">
 						<?php

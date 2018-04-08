@@ -389,13 +389,11 @@ p { font-family: "mrs-eaves", Georgia, serif; font-size: 20px; line-height: 1.4e
 
 .content-thumbnails { display: flex; flex-direction: row; flex-wrap: wrap; margin: -7px; }
 
-.content-thumbnail { position: relative; flex-basis: 30%; flex-grow: 1; margin: 7px; margin-bottom: 30px; font-size: 0; }
+.content-thumbnail { position: relative; flex-basis: 30%; flex-grow: 1; margin: 7px; border-radius: 2px; background-color: #aba4b4; font-size: 0; }
 
 .content-thumbnail img.wp-post-image { width: 100%; border-radius: 2px; }
 
-.content-thumbnail .post-thumbnail + .entry-details, .content-thumbnail .wp-post-image + .entry-details { margin-top: -30px; }
-
-.content-thumbnail .entry-details { width: 100%; max-width: 640px; padding: 0 30px; }
+.content-thumbnail .entry-details { width: 100%; max-width: 720px; padding: 0 30px; }
 
 .content-thumbnail .entry-title { margin: 0; }
 
@@ -411,17 +409,27 @@ p { font-family: "mrs-eaves", Georgia, serif; font-size: 20px; line-height: 1.4e
 
 .content-thumbnail .entry-categories { position: absolute; top: 0; left: 0; padding: 30px; }
 
-.content-thumbnail-large { flex-basis: 100%; margin-bottom: 7px; }
+.content-thumbnail-large { background-size: cover; background-position: center; }
 
-.content-thumbnail-large article { display: flex; max-width: 100vw; }
-
-.content-thumbnail-large .entry-details { position: absolute; top: 0; padding: 60px; margin-top: 0; }
+.content-thumbnail-large .entry-details { padding: 60px; margin-top: 0; }
 
 .content-thumbnail-large .entry-content { margin-top: 30px; }
 
 .content-thumbnail-large .entry-content p { display: inline; background-color: #fbfafc; }
 
 .content-thumbnail-large .cat-links { margin-bottom: 30px; }
+
+.content-list-three-combo { display: flex; }
+
+.content-list-three-combo > .content-thumbnail { flex-basis: 66.67%; }
+
+.content-list-three-combo .content-list-two-stacked { display: flex; flex-basis: 33.33%; flex-direction: column; }
+
+.content-list-three-combo .content-list-two-stacked > .content-thumbnail { flex-basis: 50%; }
+
+.content-list-three-combo + .content-list-three-combo > .content-thumbnail { order: 2; }
+
+.content-list-three-combo + .content-list-three-combo .content-list-two-stacked { order: 1; }
 
 .cat-links { display: block; font-family: "mr-eaves-sans", sans-serif; font-size: 14px; }
 

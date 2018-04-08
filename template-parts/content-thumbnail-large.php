@@ -9,10 +9,8 @@
 
 ?>
 
-<div class="content-thumbnail content-thumbnail-large">
+<div class="content-thumbnail content-thumbnail-large" style="background-image: url('<?php the_post_thumbnail_url( 'thumb-large' ); ?>');">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-		<?php the_post_thumbnail('thumb-large'); ?>
 
 		<div class="entry-details">
 
@@ -27,8 +25,8 @@
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
-				<?php threadsnetwork_entry_categories(); ?>
-				<?php the_excerpt() ?>
+				<!-- <?php threadsnetwork_entry_categories(); ?> -->
+				<!-- <?php the_excerpt() ?> -->
 			</div>
 
 		</div>
