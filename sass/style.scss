@@ -133,7 +133,8 @@ $radius: 2px;
 // $font-mono: "Roboto Mono", "Courier New", mono;
 
 // $font-header: "mrs-eaves-xl-serif-narrow", Georgia, serif;
-$font-header: "gastromond", Georgia, serif;
+// $font-header: "gastromond", Georgia, serif;
+$font-header: "mr-eaves-sans", sans-serif;
 $font-body: "mrs-eaves", Georgia, serif;
 $font-body-spacing: -0.01em;
 $font-sans: "mr-eaves-sans", sans-serif;
@@ -175,13 +176,14 @@ h1,
 h2 {
   font-family: $font-header;
   font-weight: 800;
+  font-style: italic;
   color: $charcoal;
 }
 
 h1,
 h2.big {
-  font-size: 6rem;
-  line-height: 1.4em;
+  font-size: 6.4rem;
+  line-height: 0.875em;
 }
 
 h2 {
@@ -229,50 +231,63 @@ p {
   position: relative;
   z-index: 2;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: 100%;
-  padding-bottom: $page-padding * 2;
+  padding: $page-padding;
 
-  .site-header-links {
-    flex-basis: 100%;
-    padding: ($page-padding / 2) $page-padding;
-    margin-bottom: $page-padding * 2;
-    border-bottom: 2px solid $scheme;
-    background-color: $charcoal;
-
-    a {
-      margin-right: 10px;
-      color: $grey-lighter;
-    }
-  }
+  // .site-header-links {
+  //   flex-basis: 100%;
+  //   padding: ($page-padding / 2) $page-padding;
+  //   margin-bottom: $page-padding * 2;
+  //   border-bottom: 2px solid $scheme;
+  //   background-color: $charcoal;
+  //
+  //   a {
+  //     margin-right: 10px;
+  //     color: $grey-lighter;
+  //   }
+  // }
 
   .site-branding {
     // flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 70%;
+    // flex-basis: 30%;
+  }
+
+  .site-header-links {
+    // flex-basis: 30%;
+    padding-left: $page-padding * 2;
+
+    li:first-child {
+      margin-left: 0;
+    }
   }
 
   .main-navigation {
     // flex-grow: 0;
-    flex-basis: 30%;
+    // flex-basis: 40%;
   }
 
   h1.site-title {
     margin: 0;
     // margin-bottom: -0.52em;
-    font-size: 9rem;
+    font-size: 3.4rem;
     // color: $charcoal-light;
   }
 
+  .site-header-links ul,
   ul.nav-menu {
     display: flex;
-    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
 
     li {
       float: none;
-      margin-top: 20px;
+      margin: 0;
+      margin-top: 5px;
       margin-left: 15px;
       font-family: $font-sans;
+      list-style: none;
 
       a {
         color: $grey-light;
@@ -282,6 +297,26 @@ p {
         }
       }
     }
+  }
+
+  ul.nav-menu {
+    // display: flex;
+    justify-content: flex-end;
+
+    // li {
+    //   float: none;
+    //   // margin-top: 20px;
+    //   margin-left: 15px;
+    //   font-family: $font-sans;
+    //
+    //   a {
+    //     color: $grey-light;
+    //
+    //     &:hover {
+    //       color: $charcoal;
+    //     }
+    //   }
+    // }
   }
 }
 
@@ -329,7 +364,7 @@ p {
     margin: 0;
 
     a {
-      padding: 9px 0;
+      // padding: 9px 0;
       background-color: $off-white;
     }
   }
@@ -378,6 +413,7 @@ p {
     // top: 0;
     // flex-basis: 420px;
     // flex-shrink: 0;
+    max-width: 600px;
     padding: $page-padding * 2;
     // padding-top: $page-padding;
     // padding-left: 0;
@@ -387,10 +423,10 @@ p {
   .entry-content {
     margin-top: $page-padding;
 
-    p {
-      display: inline;
-      background-color: $off-white;
-    }
+    // p {
+    //   display: inline;
+    //   background-color: $off-white;
+    // }
   }
 
   .cat-links {
@@ -491,8 +527,8 @@ p {
 
   h3 {
     max-width: 180px;
-    margin-right: $page-padding * 3;
     margin-top: 0;
+    margin-right: $page-padding * 3;
   }
 
   .newsletter-signup-form-details {

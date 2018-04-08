@@ -353,9 +353,9 @@ body { width: 100vw; max-width: 100%; margin: 0; background-color: #fbfafc; font
 
 .grey-text { color: #6f6c73; }
 
-h1, h2 { font-family: "gastromond", Georgia, serif; font-weight: 800; color: #443e4e; }
+h1, h2 { font-family: "mr-eaves-sans", sans-serif; font-weight: 800; font-style: italic; color: #443e4e; }
 
-h1, h2.big { font-size: 6rem; line-height: 1.4em; }
+h1, h2.big { font-size: 6.4rem; line-height: 0.875em; }
 
 h2 { font-size: 4rem; line-height: 1.4em; }
 
@@ -367,25 +367,25 @@ p { font-family: "mrs-eaves", Georgia, serif; font-size: 20px; line-height: 1.4e
 
 .site-header, .site-content, .site-footer { max-width: 1500px; padding: 0 30px; margin: 0 auto; }
 
-.site-header { position: relative; z-index: 2; display: flex; flex-wrap: wrap; width: 100%; padding-bottom: 60px; }
+.site-header { position: relative; z-index: 2; display: flex; flex-wrap: nowrap; width: 100%; padding: 30px; }
 
-.site-header .site-header-links { flex-basis: 100%; padding: 15px 30px; margin-bottom: 60px; border-bottom: 2px solid #ffd2f0; background-color: #443e4e; }
+.site-header .site-branding { flex-shrink: 0; }
 
-.site-header .site-header-links a { margin-right: 10px; color: #f0eff2; }
+.site-header .site-header-links { padding-left: 60px; }
 
-.site-header .site-branding { flex-shrink: 0; flex-basis: 70%; }
+.site-header .site-header-links li:first-child { margin-left: 0; }
 
-.site-header .main-navigation { flex-basis: 30%; }
+.site-header h1.site-title { margin: 0; font-size: 3.4rem; }
 
-.site-header h1.site-title { margin: 0; font-size: 9rem; }
+.site-header .site-header-links ul, .site-header ul.nav-menu { display: flex; padding: 0; margin: 0; }
 
-.site-header ul.nav-menu { display: flex; justify-content: flex-end; }
+.site-header .site-header-links ul li, .site-header ul.nav-menu li { float: none; margin: 0; margin-top: 5px; margin-left: 15px; font-family: "mr-eaves-sans", sans-serif; list-style: none; }
 
-.site-header ul.nav-menu li { float: none; margin-top: 20px; margin-left: 15px; font-family: "mr-eaves-sans", sans-serif; }
+.site-header .site-header-links ul li a, .site-header ul.nav-menu li a { color: #aba4b4; }
 
-.site-header ul.nav-menu li a { color: #aba4b4; }
+.site-header .site-header-links ul li a:hover, .site-header ul.nav-menu li a:hover { color: #443e4e; }
 
-.site-header ul.nav-menu li a:hover { color: #443e4e; }
+.site-header ul.nav-menu { justify-content: flex-end; }
 
 .content-thumbnails { display: flex; flex-direction: row; flex-wrap: wrap; margin: -7px; }
 
@@ -397,7 +397,7 @@ p { font-family: "mrs-eaves", Georgia, serif; font-size: 20px; line-height: 1.4e
 
 .content-thumbnail .entry-title { margin: 0; }
 
-.content-thumbnail .entry-title a { padding: 9px 0; background-color: #fbfafc; }
+.content-thumbnail .entry-title a { background-color: #fbfafc; }
 
 .content-thumbnail .entry-content { max-width: 420px; }
 
@@ -411,11 +411,9 @@ p { font-family: "mrs-eaves", Georgia, serif; font-size: 20px; line-height: 1.4e
 
 .content-thumbnail-large { background-size: cover; background-position: center; }
 
-.content-thumbnail-large .entry-details { padding: 60px; margin-top: 0; }
+.content-thumbnail-large .entry-details { max-width: 600px; padding: 60px; margin-top: 0; }
 
 .content-thumbnail-large .entry-content { margin-top: 30px; }
-
-.content-thumbnail-large .entry-content p { display: inline; background-color: #fbfafc; }
 
 .content-thumbnail-large .cat-links { margin-bottom: 30px; }
 
@@ -439,7 +437,7 @@ p { font-family: "mrs-eaves", Georgia, serif; font-size: 20px; line-height: 1.4e
 
 .mid-content-list-newsletter-prompt { flex-basis: 100%; padding: 60px 90px; margin: 60px 0 90px; border-radius: 2px; background-color: #f0eff2; }
 
-.mid-content-list-newsletter-prompt h3 { max-width: 180px; margin-right: 90px; margin-top: 0; }
+.mid-content-list-newsletter-prompt h3 { max-width: 180px; margin-top: 0; margin-right: 90px; }
 
 .mid-content-list-newsletter-prompt .newsletter-signup-form-details { display: flex; justify-content: center; }
 

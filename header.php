@@ -46,10 +46,20 @@
 		</div><!-- .site-branding -->
 
 		<div class="site-header-links">
-			<a href="#" target="_blank">Melbourne</a>
-			<a href="#" target="_blank">Sydney</a>
-			<a href="#" target="_blank">Brisbane</a>
-			<a href="#" target="_blank">Perth</a>
+			<ul>
+				<li>
+					<a href="#" target="_blank">Melbourne</a>
+				</li>
+				<li>
+					<a href="#" target="_blank">Sydney</a>
+				</li>
+				<li>
+					<a href="#" target="_blank">Brisbane</a>
+				</li>
+				<li>
+					<a href="#" target="_blank">Perth</a>
+				</li>
+			</ul>
 		</div>
 
 		<nav id="site-navigation" class="main-navigation">
