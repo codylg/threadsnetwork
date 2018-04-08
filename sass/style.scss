@@ -173,15 +173,21 @@ body {
 }
 
 h1,
-h2 {
+h2,
+.site-title {
   font-family: $font-header;
   font-weight: 800;
   font-style: italic;
   color: $charcoal;
 }
 
+h1.big {
+  font-size: 8rem;
+}
+
 h1,
-h2.big {
+h2.big,
+.site-title {
   font-size: 6.4rem;
   line-height: 0.875em;
 }
@@ -207,7 +213,7 @@ h3 {
 
 p {
   font-family: $font-body;
-  font-size: 20px;
+  font-size: 23px;
   line-height: 1.4em;
   letter-spacing: $font-body-spacing;
 }
@@ -234,6 +240,7 @@ p {
   flex-wrap: nowrap;
   width: 100%;
   padding: $page-padding;
+  border-top: 4px solid $scheme;
 
   // .site-header-links {
   //   flex-basis: 100%;
@@ -268,7 +275,7 @@ p {
     // flex-basis: 40%;
   }
 
-  h1.site-title {
+  .site-title {
     margin: 0;
     // margin-bottom: -0.52em;
     font-size: 3.4rem;
@@ -501,14 +508,18 @@ p {
 
 .cat-links {
   display: block;
-  font-family: $font-sans;
-  font-size: 14px;
+  font-family: $font-body;
+  font-size: 15px;
 
   a {
-    background-color: $off-white;
-    color: $grey;
+    padding: 1px 3px;
+    margin-left: 3px;
+    border-radius: $radius;
+    background-color: $scheme;
+    color: $scheme-darker;
 
     &:hover {
+      background-color: $scheme-dark;
       color: $charcoal;
     }
   }
@@ -521,7 +532,8 @@ p {
 .mid-content-list-newsletter-prompt {
   flex-basis: 100%;
   padding: ($page-padding * 2) ($page-padding * 3);
-  margin: ($page-padding * 2) 0 ($page-padding * 3);
+  // margin: ($page-padding * 2) 0 ($page-padding * 3);
+  margin: $thumbnail-spacing;
   border-radius: $radius;
   background-color: $grey-lighter;
 
@@ -597,6 +609,44 @@ input[type="submit"] {
 
   &:hover {
     color: $charcoal;
+  }
+}
+
+
+
+
+
+.single-post {
+
+  .entry-header {
+    padding: ($page-padding * 2) 0;
+
+    h1 {
+      max-width: 1000px;
+      margin: $page-padding 0;
+    }
+
+    .entry-meta {
+      color: $grey-light;
+    }
+  }
+
+  .post-thumbnail img {
+    width: 100%;
+    border-radius: $radius;
+  }
+
+  .entry-content {
+    max-width: 900px;
+    margin: 0 auto;
+
+    img {
+      border-radius: $radius;
+    }
+
+    p {
+      margin: 3em 0;
+    }
   }
 }
 

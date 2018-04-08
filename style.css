@@ -353,9 +353,11 @@ body { width: 100vw; max-width: 100%; margin: 0; background-color: #fbfafc; font
 
 .grey-text { color: #6f6c73; }
 
-h1, h2 { font-family: "mr-eaves-sans", sans-serif; font-weight: 800; font-style: italic; color: #443e4e; }
+h1, h2, .site-title { font-family: "mr-eaves-sans", sans-serif; font-weight: 800; font-style: italic; color: #443e4e; }
 
-h1, h2.big { font-size: 6.4rem; line-height: 0.875em; }
+h1.big { font-size: 8rem; }
+
+h1, h2.big, .site-title { font-size: 6.4rem; line-height: 0.875em; }
 
 h2 { font-size: 4rem; line-height: 1.4em; }
 
@@ -363,11 +365,11 @@ h3, h4, h5, h6 { font-family: "mr-eaves-sans", sans-serif; font-weight: 800; col
 
 h3 { font-size: 3rem; }
 
-p { font-family: "mrs-eaves", Georgia, serif; font-size: 20px; line-height: 1.4em; letter-spacing: -0.01em; }
+p { font-family: "mrs-eaves", Georgia, serif; font-size: 23px; line-height: 1.4em; letter-spacing: -0.01em; }
 
 .site-header, .site-content, .site-footer { max-width: 1500px; padding: 0 30px; margin: 0 auto; }
 
-.site-header { position: relative; z-index: 2; display: flex; flex-wrap: nowrap; width: 100%; padding: 30px; }
+.site-header { position: relative; z-index: 2; display: flex; flex-wrap: nowrap; width: 100%; padding: 30px; border-top: 4px solid #ffd2f0; }
 
 .site-header .site-branding { flex-shrink: 0; }
 
@@ -375,7 +377,7 @@ p { font-family: "mrs-eaves", Georgia, serif; font-size: 20px; line-height: 1.4e
 
 .site-header .site-header-links li:first-child { margin-left: 0; }
 
-.site-header h1.site-title { margin: 0; font-size: 3.4rem; }
+.site-header .site-title { margin: 0; font-size: 3.4rem; }
 
 .site-header .site-header-links ul, .site-header ul.nav-menu { display: flex; padding: 0; margin: 0; }
 
@@ -429,13 +431,13 @@ p { font-family: "mrs-eaves", Georgia, serif; font-size: 20px; line-height: 1.4e
 
 .content-list-three-combo + .content-list-three-combo .content-list-two-stacked { order: 1; }
 
-.cat-links { display: block; font-family: "mr-eaves-sans", sans-serif; font-size: 14px; }
+.cat-links { display: block; font-family: "mrs-eaves", Georgia, serif; font-size: 15px; }
 
-.cat-links a { background-color: #fbfafc; color: #6f6c73; }
+.cat-links a { padding: 1px 3px; margin-left: 3px; border-radius: 2px; background-color: #ffd2f0; color: #c882aa; }
 
-.cat-links a:hover { color: #443e4e; }
+.cat-links a:hover { background-color: #fab4dc; color: #443e4e; }
 
-.mid-content-list-newsletter-prompt { flex-basis: 100%; padding: 60px 90px; margin: 60px 0 90px; border-radius: 2px; background-color: #f0eff2; }
+.mid-content-list-newsletter-prompt { flex-basis: 100%; padding: 60px 90px; margin: 7px; border-radius: 2px; background-color: #f0eff2; }
 
 .mid-content-list-newsletter-prompt h3 { max-width: 180px; margin-top: 0; margin-right: 90px; }
 
@@ -460,6 +462,20 @@ input[type="text"] + input, input[type="email"] + input, input[type="search"] + 
 input[type="submit"] { font-weight: 700; font-size: 1.4rem; line-height: 1.4em; color: #585262; cursor: pointer; }
 
 input[type="submit"]:hover { color: #443e4e; }
+
+.single-post .entry-header { padding: 60px 0; }
+
+.single-post .entry-header h1 { max-width: 1000px; margin: 30px 0; }
+
+.single-post .entry-header .entry-meta { color: #aba4b4; }
+
+.single-post .post-thumbnail img { width: 100%; border-radius: 2px; }
+
+.single-post .entry-content { max-width: 900px; margin: 0 auto; }
+
+.single-post .entry-content img { border-radius: 2px; }
+
+.single-post .entry-content p { margin: 3em 0; }
 
 .site-footer { padding-bottom: 30px; color: #aba4b4; }
 
