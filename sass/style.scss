@@ -126,6 +126,7 @@ html[lang] {
 $page-padding: 30px;
 $thumbnail-spacing: 7px;
 $radius: 2px;
+$article-width: 850px;
 
 // $font-header: "Gastromond", Georgia, serif;
 // $font-body: "Mrs Eaves OT", Georgia, serif;
@@ -587,15 +588,24 @@ input[type="submit"] {
 .single-post {
 
   .entry-header {
-    padding: ($page-padding * 2) 0;
+    position: relative;
+    box-sizing: border-box;
+    max-width: $article-width + $page-padding * 4;
+    padding: $page-padding * 2;
+    // padding-bottom: 0;
+    margin: ($page-padding * -4) auto 0;
+    border-top: 4px solid $scheme;
+    background-color: $off-white;
 
     h1 {
       max-width: 1000px;
-      margin-top: 0;
+      margin-top: -8px;
       margin-bottom: $page-padding;
     }
 
     .entry-meta {
+      position: relative;
+      z-index: 1;
       font-family: $font-body;
       font-size: 1.8rem;
       color: $grey-light;
@@ -616,7 +626,7 @@ input[type="submit"] {
   }
 
   .entry-content {
-    max-width: 850px;
+    max-width: $article-width;
     margin: 0 auto;
 
     img {

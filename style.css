@@ -477,11 +477,11 @@ input[type="submit"] { font-weight: 700; font-size: 1.4rem; line-height: 1.4em; 
 
 input[type="submit"]:hover { color: #443e4e; }
 
-.single-post .entry-header { padding: 60px 0; }
+.single-post .entry-header { position: relative; box-sizing: border-box; max-width: 970px; padding: 60px; margin: -120px auto 0; border-top: 4px solid #ffd2f0; background-color: #fbfafc; }
 
-.single-post .entry-header h1 { max-width: 1000px; margin-top: 0; margin-bottom: 30px; }
+.single-post .entry-header h1 { max-width: 1000px; margin-top: -8px; margin-bottom: 30px; }
 
-.single-post .entry-header .entry-meta { font-family: "mrs-eaves", Georgia, serif; font-size: 1.8rem; color: #aba4b4; }
+.single-post .entry-header .entry-meta { position: relative; z-index: 1; font-family: "mrs-eaves", Georgia, serif; font-size: 1.8rem; color: #aba4b4; }
 
 .single-post .entry-header .entry-meta a { color: #aba4b4; }
 

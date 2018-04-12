@@ -10,6 +10,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<div class="post-thumbnail">
+		<?php the_post_thumbnail( 'thumb-large' ); ?>
+	</div>
+
 	<header class="entry-header">
 
 		<?php
@@ -32,11 +37,8 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="post-thumbnail">
-		<?php the_post_thumbnail( 'thumb-large' ); ?>
-	</div>
-
 	<div class="entry-content">
+		<hr />
 		<?php
 		the_content( sprintf(
 			wp_kses(
