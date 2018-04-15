@@ -389,9 +389,9 @@ pre { overflow-x: auto; padding: 30px; border-radius: 2px; background-color: #f0
 
 .site-header, .site-content, .site-footer { max-width: 1500px; padding: 0 30px; margin: 0 auto; }
 
-svg.brisbane-logo line, svg.brisbane-logo polyline, svg.brisbane-logo polygon, svg.brisbane-logo path { fill: none; stroke: #cda962; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10; stroke-width: 1; }
+svg.brisbane-logo * { fill: none; stroke: #cda962; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10; stroke-width: 1; }
 
-svg.brisbane-logo line.st1, svg.brisbane-logo polyline.st1, svg.brisbane-logo polygon.st1, svg.brisbane-logo path.st1 { stroke-width: 2; }
+svg.brisbane-logo *.st1 { stroke-width: 2; }
 
 .site-header { position: relative; z-index: 2; display: flex; flex-wrap: nowrap; width: 100%; padding: 30px; border-top: 4px solid #cda962; }
 
@@ -561,6 +561,22 @@ label { font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; font-
 
 .comments-area .comment-form-url { display: none; }
 
-.site-footer { padding-bottom: 30px; color: #aba4b4; }
+.site-footer { padding-bottom: 30px; font-size: 1.8rem; color: #aba4b4; }
 
-.site-footer .site-footer-content { padding: 90px 30px; border-radius: 2px; background-color: #443e4e; }
+.site-footer .site-footer-content { display: flex; padding: 60px; border-radius: 2px; background-color: #443e4e; }
+
+.site-footer .site-footer-content svg.brisbane-logo { width: 40px; margin-right: 60px; }
+
+.site-footer .site-footer-content svg.brisbane-logo * { stroke: #aba4b4; }
+
+.site-footer .site-footer-content ul { padding: 0; margin: 0; margin-right: 120px; }
+
+.site-footer .site-footer-content ul li { list-style-type: none; }
+
+.site-footer .site-footer-content ul li + li { margin-top: 5px; }
+
+.site-footer .site-footer-content ul a { color: #aba4b4; }
+
+.site-footer .site-footer-content ul a:hover { color: white; }
+
+.site-footer .site-footer-content aside { flex-grow: 1; align-self: flex-end; font-size: 1.4rem; text-align: right; }

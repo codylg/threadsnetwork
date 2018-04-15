@@ -48,9 +48,6 @@
 					<a href="#" target="_blank">Sydney</a>
 				</li>
 				<li>
-					<a href="#" target="_blank">Brisbane</a>
-				</li>
-				<li>
 					<a href="#" target="_blank">Perth</a>
 				</li>
 			</ul>

@@ -307,10 +307,7 @@ pre {
 
 svg.brisbane-logo {
 
-  line,
-  polyline,
-  polygon,
-  path {
+  * {
     fill: none;
     stroke: $scheme;
     stroke-linecap: round;
@@ -849,11 +846,52 @@ label {
 
 .site-footer {
   padding-bottom: $page-padding;
+  font-size: 1.8rem;
   color: $grey-light;
 
   .site-footer-content {
-    padding: ($page-padding * 3) $page-padding;
+    display: flex;
+    padding: $page-padding * 2;
     border-radius: $radius;
     background-color: $charcoal;
+
+    svg.brisbane-logo {
+      width: 40px;
+      margin-right: $page-padding * 2;
+
+      * {
+        stroke: $grey-light;
+      }
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      margin-right: $page-padding * 4;
+
+      li {
+        list-style-type: none;
+
+        + li {
+          margin-top: 5px;
+        }
+      }
+
+      a {
+        color: $grey-light;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+
+    aside {
+      flex-grow: 1;
+      align-self: flex-end;
+      font-size: 1.4rem;
+      text-align: right;
+      // color: $grey;
+    }
   }
 }
