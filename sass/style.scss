@@ -228,8 +228,22 @@ p,
 }
 
 hr {
+  // position: relative;
   height: 2px;
-  background-color: $scheme;
+  margin: $page-padding 0;
+  // background-color: $scheme;
+  background-color: transparent;
+
+  &::before {
+    content: '...';
+    display: block;
+    font-family: 'Times', serif;
+    font-size: 33px;
+    line-height: 0;
+    text-align: center;
+    letter-spacing: 40px;
+    color: $scheme;
+  }
 }
 
 blockquote {
@@ -267,7 +281,8 @@ pre {
     bottom: 0.08em;
     left: -1px;
     width: calc(100% + 2px);
-    height: 0.22em;
+    // height: 0.22em;
+    height: 1px;
     background-color: $scheme;
     @include transition;
   }
@@ -415,8 +430,8 @@ pre {
 
 
 .content-thumbnail-large {
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 
 
   .entry-details {
@@ -646,6 +661,10 @@ label {
     max-width: $article-width;
     margin: 0 auto;
 
+    > hr:first-child {
+      margin-top: 0;
+    }
+
     img {
       border-radius: $radius;
     }
@@ -654,6 +673,11 @@ label {
       margin: 3em 0;
     }
   }
+}
+
+
+.tags-links {
+  text-align: center;
 }
 
 

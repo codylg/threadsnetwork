@@ -371,7 +371,9 @@ h6 { font-size: 1.6rem; }
 
 p, .entry-content ul, .entry-content ol { font-family: "mrs-eaves", Georgia, serif; font-size: 23px; line-height: 1.4em; letter-spacing: -0.01em; }
 
-hr { height: 2px; background-color: #cda962; }
+hr { height: 2px; margin: 30px 0; background-color: transparent; }
+
+hr::before { content: '...'; display: block; font-family: 'Times', serif; font-size: 33px; line-height: 0; text-align: center; letter-spacing: 40px; color: #cda962; }
 
 blockquote { padding: 0 30px; margin: 0; border-left: 4px solid #cda962; }
 
@@ -381,7 +383,7 @@ pre { padding: 30px; background-color: #f0eff2; border-radius: 2px; color: #6f6c
 
 .underline-link, .cat-links a, .single-post .entry-content a { position: relative; }
 
-.underline-link::before, .cat-links a::before, .single-post .entry-content a::before { content: ''; position: absolute; z-index: -1; bottom: 0.08em; left: -1px; width: calc(100% + 2px); height: 0.22em; background-color: #cda962; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
+.underline-link::before, .cat-links a::before, .single-post .entry-content a::before { content: ''; position: absolute; z-index: -1; bottom: 0.08em; left: -1px; width: calc(100% + 2px); height: 1px; background-color: #cda962; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
 
 .underline-link:hover::before, .cat-links a:hover::before, .single-post .entry-content a:hover::before { background-color: #af924f; }
 
@@ -429,7 +431,7 @@ pre { padding: 30px; background-color: #f0eff2; border-radius: 2px; color: #6f6c
 
 .content-thumbnail .entry-categories { position: absolute; top: 0; left: 0; padding: 30px; }
 
-.content-thumbnail-large { background-size: cover; background-position: center; }
+.content-thumbnail-large { background-position: center; background-size: cover; }
 
 .content-thumbnail-large .entry-details { max-width: 600px; padding: 60px; margin-top: 0; }
 
@@ -491,9 +493,13 @@ label { font-family: "mr-eaves-sans", sans-serif; font-weight: 700; font-size: 1
 
 .single-post .entry-content { max-width: 850px; margin: 0 auto; }
 
+.single-post .entry-content > hr:first-child { margin-top: 0; }
+
 .single-post .entry-content img { border-radius: 2px; }
 
 .single-post .entry-content p { margin: 3em 0; }
+
+.tags-links { text-align: center; }
 
 .comments-area { max-width: 850px; padding: 30px; margin: 0 auto; border: 2px solid #cda962; }
 
