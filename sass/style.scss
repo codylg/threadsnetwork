@@ -539,30 +539,52 @@ svg.brisbane-logo {
 
 
 
-.mid-content-list-newsletter-prompt {
+.mid-content-list-prompt {
   flex-basis: 100%;
-  padding: ($page-padding * 2) ($page-padding * 3);
-  margin: $thumbnail-spacing;
-  border-radius: $radius;
-  background-color: $grey-lightest;
+  flex-grow: 1;
+  padding: $page-padding * 2;
+  margin: $page-padding $thumbnail-spacing;
+  border: 2px solid $scheme;
 
-  h3 {
-    max-width: 180px;
-    margin-top: 0;
-    margin-right: $page-padding * 3;
-  }
+  &.newsletter-prompt {
+    flex-basis: 50%;
 
-  .newsletter-signup-form-details {
-    display: flex;
-    justify-content: center;
-
-    > div {
-      flex-grow: 1;
-      max-width: 400px;
+    h3 {
+      max-width: 190px;
+      margin-top: 0;
+      margin-right: $page-padding * 3;
     }
 
-    input {
-      width: 100%;
+    .newsletter-signup-form-details {
+      display: flex;
+      justify-content: center;
+
+      > div {
+        flex-grow: 1;
+        max-width: 400px;
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  &.social-prompt {
+    flex-basis: 25%;
+    text-align: center;
+
+    h3 {
+      margin-top: 0;
+    }
+
+    p {
+      font-style: italic;
+      color: $grey-light;
+
+      a {
+        font-style: normal;
+      }
     }
   }
 }

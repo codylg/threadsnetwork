@@ -459,15 +459,25 @@ svg.brisbane-logo line.st1, svg.brisbane-logo polyline.st1, svg.brisbane-logo po
 
 .content-list-three-combo + .content-list-three-combo .content-list-two-stacked { order: 1; }
 
-.mid-content-list-newsletter-prompt { flex-basis: 100%; padding: 60px 90px; margin: 7px; border-radius: 2px; background-color: #f0eff2; }
+.mid-content-list-prompt { flex-basis: 100%; flex-grow: 1; padding: 60px; margin: 30px 7px; border: 2px solid #cda962; }
 
-.mid-content-list-newsletter-prompt h3 { max-width: 180px; margin-top: 0; margin-right: 90px; }
+.mid-content-list-prompt.newsletter-prompt { flex-basis: 50%; }
 
-.mid-content-list-newsletter-prompt .newsletter-signup-form-details { display: flex; justify-content: center; }
+.mid-content-list-prompt.newsletter-prompt h3 { max-width: 190px; margin-top: 0; margin-right: 90px; }
 
-.mid-content-list-newsletter-prompt .newsletter-signup-form-details > div { flex-grow: 1; max-width: 400px; }
+.mid-content-list-prompt.newsletter-prompt .newsletter-signup-form-details { display: flex; justify-content: center; }
 
-.mid-content-list-newsletter-prompt .newsletter-signup-form-details input { width: 100%; }
+.mid-content-list-prompt.newsletter-prompt .newsletter-signup-form-details > div { flex-grow: 1; max-width: 400px; }
+
+.mid-content-list-prompt.newsletter-prompt .newsletter-signup-form-details input { width: 100%; }
+
+.mid-content-list-prompt.social-prompt { flex-basis: 25%; text-align: center; }
+
+.mid-content-list-prompt.social-prompt h3 { margin-top: 0; }
+
+.mid-content-list-prompt.social-prompt p { font-style: italic; color: #aba4b4; }
+
+.mid-content-list-prompt.social-prompt p a { font-style: normal; }
 
 textarea, input, input[type="text"], input[type="email"], input[type="url"], input[type="search"], input[type="submit"] { padding: 0; margin: 0; border: 0; border-radius: 0; background-color: transparent; font-family: "sofia-pro", Helvetica, sans-serif; font-size: 1.6rem; color: #443e4e; outline: none; -webkit-appearance: none; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
 

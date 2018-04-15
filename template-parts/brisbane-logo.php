@@ -1,8 +1,4 @@
 <svg class="brisbane-logo" x="0px" y="0px" viewBox="0 0 26 20" style="enable-background:new 0 0 26 20;">
-	<style type="text/css">
-		/* .st0{fill:none;stroke:#010101;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} */
-		/* .st1{fill:none;stroke:#010101;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} */
-	</style>
 	<polyline class="st0" points="19,19 13,12.4 19,1.4 "/>
 	<line class="st0" x1="1" y1="19" x2="1" y2="11.3"/>
 	<polygon class="st0" points="7,9 1,15.6 7,19 "/>
