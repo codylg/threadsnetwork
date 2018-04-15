@@ -405,6 +405,10 @@ svg.brisbane-logo *.st1 { stroke-width: 2; }
 
 .site-header .site-header-links li:first-child { margin-left: 0; }
 
+.site-header .site-header-links li { white-space: nowrap; }
+
+.site-header .site-header-links li + li::before { content: '/'; margin-right: 11px; color: #dadce3; }
+
 .site-header .site-title { margin: 0; font-size: 3.4rem; }
 
 .site-header .site-header-links ul, .site-header ul.nav-menu { display: flex; padding: 0; margin: 0; }
@@ -416,6 +420,8 @@ svg.brisbane-logo *.st1 { stroke-width: 2; }
 .site-header .site-header-links ul li a:hover, .site-header ul.nav-menu li a:hover { color: #443e4e; }
 
 .site-header ul.nav-menu { justify-content: flex-end; }
+
+.site-header ul.nav-menu li a { color: #585262; }
 
 .content-thumbnails { display: flex; flex-direction: row; flex-wrap: wrap; margin: -7px; }
 
