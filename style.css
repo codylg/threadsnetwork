@@ -465,11 +465,11 @@ textarea, input, input[type="text"], input[type="email"], input[type="url"], inp
 
 textarea::placeholder, input::placeholder, input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="url"]::placeholder, input[type="search"]::placeholder, input[type="submit"]::placeholder { color: #aba4b4; }
 
-textarea, input[type="text"], input[type="email"], input[type="url"], input[type="search"] { display: block; padding: 10px 14px; border: 1px solid #f0eff2; border-radius: 2px; background-color: #f0eff2; }
+textarea, input[type="text"], input[type="email"], input[type="url"], input[type="search"] { display: block; padding: 10px 14px; border: 1px solid #f0eff2; border-radius: 2px; background-color: white; box-shadow: 0 2px 2px rgba(68, 62, 78, 0.02); }
 
 textarea:hover, input[type="text"]:hover, input[type="email"]:hover, input[type="url"]:hover, input[type="search"]:hover { border-color: #dadce3; }
 
-textarea:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus { border-color: #cda962; background-color: #fbfafc; }
+textarea:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus { border-color: #cda962; box-shadow: 0 3px 3px rgba(68, 62, 78, 0.06); }
 
 textarea + input, input[type="text"] + input, input[type="email"] + input, input[type="url"] + input, input[type="search"] + input { margin-top: 24px; }
 

@@ -570,9 +570,8 @@ input[type="search"] {
   padding: 10px 14px;
   border: 1px solid $grey-lightest;
   border-radius: $radius;
-  background-color: $grey-lightest;
-  // padding-bottom: 3px;
-  // border-bottom: 2px solid $grey-light;
+  background-color: $white;
+  box-shadow: 0 2px 2px rgba($charcoal, 0.02);
 
   &:hover {
     border-color: $grey-lighter;
@@ -580,7 +579,7 @@ input[type="search"] {
 
   &:focus {
     border-color: $scheme;
-    background-color: $off-white;
+    box-shadow: 0 3px 3px rgba($charcoal, 0.06);
   }
 
   + input {
