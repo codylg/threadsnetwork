@@ -252,7 +252,6 @@ blockquote {
   border-left: 4px solid $scheme;
 
   p {
-    font-family: $font-sans;
     font-weight: 700;
     font-style: italic;
     font-size: 3.2rem;
@@ -261,11 +260,11 @@ blockquote {
 }
 
 pre {
-  padding: $page-padding;
-  background-color: $grey-lightest;
-  border-radius: $radius;
-  color: $grey;
   overflow-x: auto;
+  padding: $page-padding;
+  border-radius: $radius;
+  background-color: $grey-lightest;
+  color: $grey;
 }
 
 
@@ -306,6 +305,27 @@ pre {
 
 
 
+svg.brisbane-logo {
+
+  line,
+  polyline,
+  polygon,
+  path {
+    fill: none;
+    stroke: $scheme;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-width: 1;
+
+    &.st1 {
+      stroke-width: 2;
+    }
+  }
+}
+
+
+
 
 .site-header {
   position: relative;
@@ -318,6 +338,16 @@ pre {
 
   .site-branding {
     flex-shrink: 0;
+
+    svg.brisbane-logo {
+      display: inline-block;
+      width: 33px;
+      margin-right: 10px;
+    }
+
+    .site-title {
+      display: inline-block;
+    }
   }
 
   .site-header-links {
@@ -639,11 +669,12 @@ label {
       position: relative;
       z-index: 1;
       font-family: $font-body;
-      font-size: 1.8rem;
-      color: $grey-light;
+      font-size: 2rem;
+      font-style: italic;
+      color: $grey;
 
       a {
-        color: $grey-light;
+        color: $grey;
 
         &:hover {
           color: $charcoal-light;
@@ -687,6 +718,8 @@ label {
 
 
 .tags-links {
+  font-size: 2rem;
+  font-style: italic;
   text-align: center;
 }
 

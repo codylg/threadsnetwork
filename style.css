@@ -377,9 +377,9 @@ hr::before { content: '...'; display: block; font-family: 'Times', serif; font-s
 
 blockquote { padding: 0 30px; margin: 0; border-left: 4px solid #cda962; }
 
-blockquote p { font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; font-style: italic; font-size: 3.2rem; line-height: 1.2em; }
+blockquote p { font-weight: 700; font-style: italic; font-size: 3.2rem; line-height: 1.2em; }
 
-pre { padding: 30px; background-color: #f0eff2; border-radius: 2px; color: #6f6c73; overflow-x: auto; }
+pre { overflow-x: auto; padding: 30px; border-radius: 2px; background-color: #f0eff2; color: #6f6c73; }
 
 .underline-link, .cat-links a, .single-post .entry-content a { position: relative; }
 
@@ -389,9 +389,17 @@ pre { padding: 30px; background-color: #f0eff2; border-radius: 2px; color: #6f6c
 
 .site-header, .site-content, .site-footer { max-width: 1500px; padding: 0 30px; margin: 0 auto; }
 
+svg.brisbane-logo line, svg.brisbane-logo polyline, svg.brisbane-logo polygon, svg.brisbane-logo path { fill: none; stroke: #cda962; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10; stroke-width: 1; }
+
+svg.brisbane-logo line.st1, svg.brisbane-logo polyline.st1, svg.brisbane-logo polygon.st1, svg.brisbane-logo path.st1 { stroke-width: 2; }
+
 .site-header { position: relative; z-index: 2; display: flex; flex-wrap: nowrap; width: 100%; padding: 30px; border-top: 4px solid #cda962; }
 
 .site-header .site-branding { flex-shrink: 0; }
+
+.site-header .site-branding svg.brisbane-logo { display: inline-block; width: 33px; margin-right: 10px; }
+
+.site-header .site-branding .site-title { display: inline-block; }
 
 .site-header .site-header-links { padding-left: 60px; }
 
@@ -483,9 +491,9 @@ label { font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; font-
 
 .single-post .entry-header h1 { max-width: 1000px; margin-top: -20px; margin-bottom: 30px; }
 
-.single-post .entry-header .entry-meta { position: relative; z-index: 1; font-family: "minion-pro", Georgia, serif; font-size: 1.8rem; color: #aba4b4; }
+.single-post .entry-header .entry-meta { position: relative; z-index: 1; font-family: "minion-pro", Georgia, serif; font-size: 2rem; font-style: italic; color: #6f6c73; }
 
-.single-post .entry-header .entry-meta a { color: #aba4b4; }
+.single-post .entry-header .entry-meta a { color: #6f6c73; }
 
 .single-post .entry-header .entry-meta a:hover { color: #585262; }
 
@@ -501,7 +509,7 @@ label { font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; font-
 
 .single-post .entry-content p { margin: 3em 0; }
 
-.tags-links { text-align: center; }
+.tags-links { font-size: 2rem; font-style: italic; text-align: center; }
 
 .comments-area { max-width: 850px; padding: 30px; margin: 0 auto; border: 2px solid #cda962; }
 

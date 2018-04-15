@@ -25,15 +25,9 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'threadsnetwork' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<!-- <div class="site-header-links">
-			<a href="#" target="_blank">Melbourne</a>
-			<a href="#" target="_blank">Sydney</a>
-			<a href="#" target="_blank">Brisbane</a>
-			<a href="#" target="_blank">Perth</a>
-		</div> -->
 		<div class="site-branding">
 			<?php
-			the_custom_logo();
+			get_template_part( 'template-parts/brisbane-logo' );
 			if ( is_front_page() && is_home() ) :
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
