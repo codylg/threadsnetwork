@@ -349,13 +349,13 @@ html[lang] { margin-top: 0 !important; }
 
 html { font-size: 62.5%; }
 
-body { width: 100vw; max-width: 100%; margin: 0; background-color: #fbfafc; font-family: "mr-eaves-sans", sans-serif; font-weight: 400; font-size: 1.6rem; color: #443e4e; -webkit-tap-highlight-color: transparent; }
+body { width: 100vw; max-width: 100%; margin: 0; background-color: #fbfafc; font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 400; font-size: 1.6rem; color: #443e4e; -webkit-tap-highlight-color: transparent; }
 
 .grey-text { color: #6f6c73; }
 
-h1, h2, h3, h4, h5, h6, .site-title { font-family: "mr-eaves-sans", sans-serif; font-weight: 800; font-style: italic; color: #443e4e; }
+h1, h2, h3, h4, h5, h6, .site-title { font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; letter-spacing: -0.01em; color: #443e4e; }
 
-h1.big { font-size: 8rem; }
+h1.big { font-size: 8rem; line-height: 1em; }
 
 h1, h2.big, .site-title { font-size: 6.4rem; line-height: 0.875em; }
 
@@ -369,7 +369,7 @@ h5 { font-size: 2rem; }
 
 h6 { font-size: 1.6rem; }
 
-p, .entry-content ul, .entry-content ol { font-family: "mrs-eaves", Georgia, serif; font-size: 23px; line-height: 1.4em; letter-spacing: -0.01em; }
+p, .entry-content ul, .entry-content ol { font-family: "minion-pro", Georgia, serif; font-size: 21px; line-height: 1.6em; letter-spacing: 0; }
 
 hr { height: 2px; margin: 30px 0; background-color: transparent; }
 
@@ -377,7 +377,7 @@ hr::before { content: '...'; display: block; font-family: 'Times', serif; font-s
 
 blockquote { padding: 0 30px; margin: 0; border-left: 4px solid #cda962; }
 
-blockquote p { font-family: "mr-eaves-sans", sans-serif; font-weight: 700; font-style: italic; font-size: 3.2rem; line-height: 1.2em; }
+blockquote p { font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; font-style: italic; font-size: 3.2rem; line-height: 1.2em; }
 
 pre { padding: 30px; background-color: #f0eff2; border-radius: 2px; color: #6f6c73; overflow-x: auto; }
 
@@ -401,7 +401,7 @@ pre { padding: 30px; background-color: #f0eff2; border-radius: 2px; color: #6f6c
 
 .site-header .site-header-links ul, .site-header ul.nav-menu { display: flex; padding: 0; margin: 0; }
 
-.site-header .site-header-links ul li, .site-header ul.nav-menu li { float: none; margin: 0; margin-top: 5px; margin-left: 15px; font-family: "mr-eaves-sans", sans-serif; list-style: none; }
+.site-header .site-header-links ul li, .site-header ul.nav-menu li { float: none; margin: 0; margin-top: 5px; margin-left: 15px; font-family: "sofia-pro", Helvetica, sans-serif; list-style: none; }
 
 .site-header .site-header-links ul li a, .site-header ul.nav-menu li a { color: #aba4b4; }
 
@@ -425,7 +425,7 @@ pre { padding: 30px; background-color: #f0eff2; border-radius: 2px; color: #6f6c
 
 .content-thumbnail .entry-content p { margin: 0; }
 
-.content-thumbnail .entry-content .read-more { font-family: "mr-eaves-sans", sans-serif; font-size: 14px; color: #aba4b4; }
+.content-thumbnail .entry-content .read-more { font-family: "sofia-pro", Helvetica, sans-serif; font-size: 14px; color: #aba4b4; }
 
 .content-thumbnail .entry-content .read-more:hover { color: #443e4e; }
 
@@ -461,7 +461,7 @@ pre { padding: 30px; background-color: #f0eff2; border-radius: 2px; color: #6f6c
 
 .mid-content-list-newsletter-prompt .newsletter-signup-form-details input { width: 100%; }
 
-textarea, input, input[type="text"], input[type="email"], input[type="url"], input[type="search"], input[type="submit"] { padding: 0; margin: 0; border: 0; border-radius: 0; background-color: transparent; font-family: "mr-eaves-sans", sans-serif; font-size: 1.6rem; color: #443e4e; outline: none; -webkit-appearance: none; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
+textarea, input, input[type="text"], input[type="email"], input[type="url"], input[type="search"], input[type="submit"] { padding: 0; margin: 0; border: 0; border-radius: 0; background-color: transparent; font-family: "sofia-pro", Helvetica, sans-serif; font-size: 1.6rem; color: #443e4e; outline: none; -webkit-appearance: none; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
 
 textarea::placeholder, input::placeholder, input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="url"]::placeholder, input[type="search"]::placeholder, input[type="submit"]::placeholder { color: #aba4b4; }
 
@@ -477,13 +477,13 @@ input[type="submit"], .comment-reply-link { padding: 6px 11px; border-radius: 2p
 
 input[type="submit"]:hover, .comment-reply-link:hover { background-color: #dadce3; color: #443e4e; }
 
-label { font-family: "mr-eaves-sans", sans-serif; font-weight: 700; font-size: 1.6rem; color: #6f6c73; }
+label { font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; font-size: 1.6rem; color: #6f6c73; }
 
-.single-post .entry-header { position: relative; box-sizing: border-box; max-width: 970px; padding: 60px; margin: -120px auto 0; border-top: 4px solid #cda962; background-color: #fbfafc; }
+.single-post .entry-header { position: relative; box-sizing: border-box; max-width: 970px; padding: 60px; margin: -120px auto 0; border-top: 4px solid #cda962; background-color: #fbfafc; text-align: center; }
 
-.single-post .entry-header h1 { max-width: 1000px; margin-top: -8px; margin-bottom: 30px; }
+.single-post .entry-header h1 { max-width: 1000px; margin-top: -20px; margin-bottom: 30px; }
 
-.single-post .entry-header .entry-meta { position: relative; z-index: 1; font-family: "mrs-eaves", Georgia, serif; font-size: 1.8rem; color: #aba4b4; }
+.single-post .entry-header .entry-meta { position: relative; z-index: 1; font-family: "minion-pro", Georgia, serif; font-size: 1.8rem; color: #aba4b4; }
 
 .single-post .entry-header .entry-meta a { color: #aba4b4; }
 
@@ -494,6 +494,8 @@ label { font-family: "mr-eaves-sans", sans-serif; font-weight: 700; font-size: 1
 .single-post .entry-content { max-width: 850px; margin: 0 auto; }
 
 .single-post .entry-content > hr:first-child { margin-top: 0; }
+
+@supports (initial-letter: 1) or (-webkit-initial-letter: 1) { .single-post .entry-content > p:first-of-type::first-letter { margin-right: 0.3em; color: #cda962; initial-letter: 3; -webkit-initial-letter: 3; } }
 
 .single-post .entry-content img { border-radius: 2px; }
 

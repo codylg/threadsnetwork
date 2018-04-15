@@ -128,18 +128,17 @@ $thumbnail-spacing: 7px;
 $radius: 2px;
 $article-width: 850px;
 
-// $font-header: "Gastromond", Georgia, serif;
-// $font-body: "Mrs Eaves OT", Georgia, serif;
-// $font-body-spacing: -0.01em;
-// $font-mono: "Roboto Mono", "Courier New", mono;
 
-// $font-header: "mrs-eaves-xl-serif-narrow", Georgia, serif;
-// $font-header: "gastromond", Georgia, serif;
-$font-header: "mr-eaves-sans", sans-serif;
-$font-body: "mrs-eaves", Georgia, serif;
-$font-body-spacing: -0.01em;
-$font-sans: "mr-eaves-sans", sans-serif;
-// $font-caps: "mrs-eaves-roman-all-petite-c", serif;
+// $font-header: "minion-std-black", serif;
+// $font-body: "minion-pro", Georgia, serif;
+// $font-body-spacing: 0;
+// $font-sans: "sofia-pro", "Times", sans-serif;
+
+
+$font-header: "sofia-pro", Helvetica, sans-serif;
+$font-body: "minion-pro", Georgia, serif;
+$font-body-spacing: 0;
+$font-sans: "sofia-pro", Helvetica, sans-serif;
 
 
 
@@ -180,13 +179,14 @@ h5,
 h6,
 .site-title {
   font-family: $font-header;
-  font-weight: 800;
-  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   color: $charcoal;
 }
 
 h1.big {
   font-size: 8rem;
+  line-height: 1em;
 }
 
 h1,
@@ -222,8 +222,8 @@ p,
 .entry-content ul,
 .entry-content ol {
   font-family: $font-body;
-  font-size: 23px;
-  line-height: 1.4em;
+  font-size: 21px;
+  line-height: 1.6em;
   letter-spacing: $font-body-spacing;
 }
 
@@ -627,10 +627,11 @@ label {
     margin: ($page-padding * -4) auto 0;
     border-top: 4px solid $scheme;
     background-color: $off-white;
+    text-align: center;
 
     h1 {
       max-width: 1000px;
-      margin-top: -8px;
+      margin-top: -20px;
       margin-bottom: $page-padding;
     }
 
@@ -662,6 +663,16 @@ label {
 
     > hr:first-child {
       margin-top: 0;
+    }
+
+    @supports ((initial-letter: 1) or (-webkit-initial-letter: 1)) {
+
+      > p:first-of-type::first-letter {
+        margin-right: 0.3em;
+        color: $scheme;
+        initial-letter: 3;
+        -webkit-initial-letter: 3;
+      }
     }
 
     img {
