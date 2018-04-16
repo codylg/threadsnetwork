@@ -35,3 +35,10 @@
 @mixin transition($property: all, $duration: 0.33s, $timing: cubic-bezier(0.19, 1, 0.22, 1)) {
   transition: $property $duration $timing;
 }
+
+@mixin prefix($property, $values...) {
+  -webkit-#{$property}: $values;
+  -moz-#{$property}: $values;
+  -ms-#{$property}: $values;
+  #{$property}: $values;
+}

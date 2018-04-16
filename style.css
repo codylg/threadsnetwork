@@ -359,7 +359,7 @@ h1.big { font-size: 8rem; line-height: 1em; }
 
 h1, h2.big, .site-title { font-size: 6.4rem; line-height: 0.875em; }
 
-h2 { font-size: 4rem; line-height: 1.4em; }
+h2 { font-size: 4rem; line-height: 1.2em; }
 
 h3 { font-size: 3rem; }
 
@@ -427,31 +427,33 @@ svg.brisbane-logo *.st1 { stroke-width: 2; }
 
 .content-thumbnail { position: relative; flex-basis: 30%; flex-grow: 1; margin: 7px; border-radius: 2px; background-color: #aba4b4; font-size: 0; }
 
+.content-thumbnail:hover .thumbnail-cover, .content-thumbnail:hover .entry-details { opacity: 1; -webkit-transform: none; -moz-transform: none; -ms-transform: none; transform: none; }
+
+.content-thumbnail .thumbnail-cover { position: absolute; z-index: 1; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(68, 62, 78, 0.15); opacity: 0; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); pointer-events: none; }
+
 .content-thumbnail img.wp-post-image { width: 100%; border-radius: 2px; }
 
-.content-thumbnail .entry-details { width: 100%; max-width: 720px; padding: 0 30px; }
+.content-thumbnail .entry-details { position: absolute; z-index: 2; top: 0; left: 0; width: 100%; padding: 30px; padding-bottom: 0; opacity: 0; -webkit-transform: translateY(-5px); -moz-transform: translateY(-5px); -ms-transform: translateY(-5px); transform: translateY(-5px); transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
 
 .content-thumbnail .entry-title { margin: 0; }
 
-.content-thumbnail .entry-title a { background-color: #fbfafc; }
+.content-thumbnail .entry-title a { color: white; opacity: 0.95; }
 
-.content-thumbnail .entry-content { max-width: 420px; }
+.content-thumbnail .entry-title a:hover { opacity: 1; }
 
-.content-thumbnail .entry-content p { margin: 0; }
+.content-thumbnail .thumbnail-read-link { display: block; padding-top: 20px; opacity: 0.8; font-size: 1.8rem; color: white; }
 
-.content-thumbnail .entry-content .read-more { font-family: "sofia-pro", Helvetica, sans-serif; font-size: 14px; color: #aba4b4; }
+.content-thumbnail .thumbnail-read-link:hover { opacity: 1; }
 
-.content-thumbnail .entry-content .read-more:hover { color: #443e4e; }
+.content-thumbnail-large { position: relative; background-position: center; background-size: cover; }
 
-.content-thumbnail .entry-categories { position: absolute; top: 0; left: 0; padding: 30px; }
+.content-thumbnail-large .entry-details { position: relative; padding: 60px; padding-bottom: 150px; background: linear-gradient(rgba(68, 62, 78, 0.25), rgba(68, 62, 78, 0)); opacity: 1; -webkit-transform: none; -moz-transform: none; -ms-transform: none; transform: none; }
 
-.content-thumbnail-large { background-position: center; background-size: cover; }
+.content-thumbnail-large .entry-details .entry-header { display: flex; }
 
-.content-thumbnail-large .entry-details { max-width: 600px; padding: 60px; margin-top: 0; }
+.content-thumbnail-large .entry-details .entry-title { max-width: 600px; }
 
-.content-thumbnail-large .entry-content { margin-top: 30px; }
-
-.content-thumbnail-large .cat-links { margin-bottom: 30px; }
+.content-thumbnail-large .entry-details .thumbnail-read-link { flex-grow: 1; text-align: right; }
 
 .content-list-three-combo { display: flex; }
 
@@ -567,7 +569,7 @@ label { font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; font-
 
 .comments-area .comment-form-url { display: none; }
 
-.site-footer { padding-bottom: 30px; font-size: 1.8rem; color: #aba4b4; }
+.site-footer { padding-bottom: 30px; font-size: 1.6rem; color: #aba4b4; }
 
 .site-footer .site-footer-content { display: flex; padding: 60px; border-radius: 2px; background-color: #443e4e; }
 
@@ -575,7 +577,7 @@ label { font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; font-
 
 .site-footer .site-footer-content svg.brisbane-logo * { stroke: #aba4b4; }
 
-.site-footer .site-footer-content ul { padding: 0; margin: 0; margin-right: 120px; }
+.site-footer .site-footer-content ul { padding: 0; margin: 0; margin-right: 90px; }
 
 .site-footer .site-footer-content ul li { list-style-type: none; }
 
@@ -585,4 +587,4 @@ label { font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; font-
 
 .site-footer .site-footer-content ul a:hover { color: white; }
 
-.site-footer .site-footer-content aside { flex-grow: 1; align-self: flex-end; font-size: 1.4rem; text-align: right; }
+.site-footer .site-footer-content aside { flex-grow: 1; align-self: flex-end; font-size: 1.2rem; text-align: right; }

@@ -198,7 +198,7 @@ h2.big,
 
 h2 {
   font-size: 4rem;
-  line-height: 1.4em;
+  line-height: 1.2em;
 }
 
 h3 {
@@ -228,10 +228,8 @@ p,
 }
 
 hr {
-  // position: relative;
   height: 2px;
   margin: $page-padding 0;
-  // background-color: $scheme;
   background-color: transparent;
 
   &::before {
@@ -423,70 +421,99 @@ svg.brisbane-logo {
   background-color: $grey-light;
   font-size: 0;
 
+  &:hover {
+
+    .thumbnail-cover,
+    .entry-details {
+      opacity: 1;
+      @include prefix(transform, none);
+    }
+  }
+
+  .thumbnail-cover {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($charcoal, 0.15);
+    opacity: 0;
+    @include transition;
+    pointer-events: none;
+  }
+
   img.wp-post-image {
     width: 100%;
     border-radius: $radius;
   }
 
   .entry-details {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 720px;
-    padding: 0 $page-padding;
+    padding: $page-padding;
+    padding-bottom: 0;
+    opacity: 0;
+    @include prefix(transform, translateY(-5px));
+    @include transition;
   }
 
   .entry-title {
     margin: 0;
 
     a {
-      background-color: $off-white;
-    }
-  }
-
-  .entry-content {
-    max-width: 420px;
-
-    p {
-      margin: 0;
-    }
-
-    .read-more {
-      font-family: $font-sans;
-      font-size: 14px;
-      color: $grey-light;
+      color: $white;
+      opacity: 0.95;
 
       &:hover {
-        color: $charcoal;
+        opacity: 1;
       }
     }
   }
 
-  .entry-categories {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: $page-padding;
+  .thumbnail-read-link {
+    display: block;
+    padding-top: 20px;
+    opacity: 0.8;
+    font-size: 1.8rem;
+    color: white;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
 
 
 .content-thumbnail-large {
+  position: relative;
   background-position: center;
   background-size: cover;
 
-
   .entry-details {
-    max-width: 600px;
+    position: relative;
     padding: $page-padding * 2;
-    margin-top: 0;
-  }
+    padding-bottom: $page-padding * 5;
+    background: linear-gradient(rgba($charcoal, 0.25), rgba($charcoal, 0));
+    opacity: 1;
+    @include prefix(transform, none);
 
-  .entry-content {
-    margin-top: $page-padding;
-  }
+    .entry-header {
+      display: flex;
+    }
 
-  .cat-links {
-    margin-bottom: $page-padding;
+    .entry-title {
+      max-width: 600px;
+    }
+
+    .thumbnail-read-link {
+      flex-grow: 1;
+      text-align: right;
+    }
   }
 }
 
@@ -860,7 +887,7 @@ label {
 
 .site-footer {
   padding-bottom: $page-padding;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: $grey-light;
 
   .site-footer-content {
@@ -881,7 +908,7 @@ label {
     ul {
       padding: 0;
       margin: 0;
-      margin-right: $page-padding * 4;
+      margin-right: $page-padding * 3;
 
       li {
         list-style-type: none;
@@ -903,9 +930,8 @@ label {
     aside {
       flex-grow: 1;
       align-self: flex-end;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       text-align: right;
-      // color: $grey;
     }
   }
 }
