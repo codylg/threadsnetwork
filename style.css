@@ -433,7 +433,7 @@ svg.brisbane-logo *.st1 { stroke-width: 2; }
 
 .content-thumbnail img.wp-post-image { width: 100%; border-radius: 2px; }
 
-.content-thumbnail .entry-details { position: absolute; z-index: 2; top: 0; left: 0; width: 100%; padding: 30px; padding-bottom: 0; opacity: 0; -webkit-transform: translateY(-5px); -moz-transform: translateY(-5px); -ms-transform: translateY(-5px); transform: translateY(-5px); transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
+.content-thumbnail .entry-details { position: absolute; z-index: 2; top: 0; left: 0; width: 100%; padding: 30px; padding-bottom: 0; opacity: 0; -webkit-font-smoothing: antialiased; -webkit-transform: translateY(-5px); -moz-transform: translateY(-5px); -ms-transform: translateY(-5px); transform: translateY(-5px); transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
 
 .content-thumbnail .entry-title { margin: 0; }
 
