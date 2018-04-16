@@ -58,6 +58,5 @@
 			'after'  => '</div>',
 		) );
 		?>
-		<hr />
 		<?php threadsnetwork_entry_footer(); ?>
 	</div><!-- .entry-content -->
