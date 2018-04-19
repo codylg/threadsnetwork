@@ -441,7 +441,7 @@ svg.brisbane-logo *.st1 { stroke-width: 2; }
 
 .content-thumbnail .entry-title a:hover { opacity: 1; }
 
-.content-thumbnail .thumbnail-read-link { display: block; padding-top: 20px; opacity: 0.8; font-size: 1.8rem; color: white; }
+.content-thumbnail .thumbnail-read-link { display: block; padding-top: 20px; opacity: 0.8; font-weight: 700; font-size: 1.6rem; color: white; }
 
 .content-thumbnail .thumbnail-read-link:hover { opacity: 1; }
 
