@@ -888,9 +888,9 @@ label {
 
 .posts-navigation {
   margin: 0;
+  margin-top: $page-padding;
 
   .nav-links {
-    padding: $page-padding 0;
 
     .nav-previous::before {
       content: '\2190';
@@ -912,7 +912,7 @@ label {
   display: flex;
   flex-wrap: wrap;
   padding: $page-padding / 2;
-  margin-bottom: $page-padding;
+  margin-top: $page-padding;
   border: 2px solid $scheme;
 
   section {
@@ -928,6 +928,7 @@ label {
 
 .site-footer {
   padding-bottom: $page-padding;
+  margin-top: $page-padding;
   font-size: 1.6rem;
   color: $grey-light;
 

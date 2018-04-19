@@ -222,7 +222,7 @@ a:hover, a:focus, a:active { color: #28262a; }
 @media screen and (min-width: 37.5em) { .menu-toggle { display: none; }
   .main-navigation ul { display: block; } }
 
-.site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation { margin: 0 0 1.5em; overflow: hidden; }
+.site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation { overflow: hidden; }
 
 .comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous { float: left; width: 50%; }
 
@@ -569,21 +569,19 @@ label { font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; font-
 
 .comments-area .comment-form-url { display: none; }
 
-.posts-navigation { margin: 0; }
-
-.posts-navigation .nav-links { padding: 30px 0; }
+.posts-navigation { margin: 0; margin-top: 30px; }
 
 .posts-navigation .nav-links .nav-previous::before { content: '\2190'; margin-right: 5px; }
 
 .posts-navigation .nav-links .nav-next::after { content: '\2192'; margin-left: 5px; }
 
-#secondary { display: flex; flex-wrap: wrap; padding: 15px; margin-bottom: 30px; border: 2px solid #cda962; }
+#secondary { display: flex; flex-wrap: wrap; padding: 15px; margin-top: 30px; border: 2px solid #cda962; }
 
 #secondary section { flex-grow: 1; margin: 15px; }
 
 #secondary section > h2:first-child { margin-top: 0; }
 
-.site-footer { padding-bottom: 30px; font-size: 1.6rem; color: #aba4b4; }
+.site-footer { padding-bottom: 30px; margin-top: 30px; font-size: 1.6rem; color: #aba4b4; }
 
 .site-footer .site-footer-content { display: flex; padding: 60px; border-radius: 2px; background-color: #443e4e; }
 
