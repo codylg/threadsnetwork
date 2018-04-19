@@ -569,6 +569,12 @@ label { font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; font-
 
 .comments-area .comment-form-url { display: none; }
 
+#secondary { display: flex; flex-wrap: wrap; padding: 15px; margin-bottom: 30px; border: 2px solid #cda962; }
+
+#secondary section { flex-grow: 1; margin: 15px; }
+
+#secondary section > h2:first-child { margin-top: 0; }
+
 .site-footer { padding-bottom: 30px; font-size: 1.6rem; color: #aba4b4; }
 
 .site-footer .site-footer-content { display: flex; padding: 60px; border-radius: 2px; background-color: #443e4e; }

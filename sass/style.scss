@@ -887,6 +887,25 @@ label {
 
 
 
+// Sidebar
+#secondary {
+  display: flex;
+  flex-wrap: wrap;
+  padding: $page-padding / 2;
+  margin-bottom: $page-padding;
+  border: 2px solid $scheme;
+
+  section {
+    flex-grow: 1;
+    margin: $page-padding / 2;
+
+    > h2:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+
 .site-footer {
   padding-bottom: $page-padding;
   font-size: 1.6rem;
