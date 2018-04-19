@@ -886,6 +886,26 @@ label {
 
 
 
+.posts-navigation {
+  margin: 0;
+
+  .nav-links {
+    padding: $page-padding 0;
+
+    .nav-previous::before {
+      content: '\2190';
+      margin-right: 5px;
+    }
+
+    .nav-next::after {
+      content: '\2192';
+      margin-left: 5px;
+    }
+  }
+}
+
+
+
 
 // Sidebar
 #secondary {

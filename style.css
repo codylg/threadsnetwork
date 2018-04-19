@@ -569,6 +569,14 @@ label { font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; font-
 
 .comments-area .comment-form-url { display: none; }
 
+.posts-navigation { margin: 0; }
+
+.posts-navigation .nav-links { padding: 30px 0; }
+
+.posts-navigation .nav-links .nav-previous::before { content: '\2190'; margin-right: 5px; }
+
+.posts-navigation .nav-links .nav-next::after { content: '\2192'; margin-left: 5px; }
+
 #secondary { display: flex; flex-wrap: wrap; padding: 15px; margin-bottom: 30px; border: 2px solid #cda962; }
 
 #secondary section { flex-grow: 1; margin: 15px; }
