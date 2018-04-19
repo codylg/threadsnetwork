@@ -423,6 +423,10 @@ svg.brisbane-logo *.st1 { stroke-width: 2; }
 
 .site-header ul.nav-menu li a { color: #585262; }
 
+.page-header { margin-top: 30px; margin-bottom: 60px; }
+
+.page-header h1 { margin: 0; }
+
 .content-thumbnails { display: flex; flex-direction: row; flex-wrap: wrap; margin: -7px; }
 
 .content-thumbnail { position: relative; flex-basis: 30%; flex-grow: 1; margin: 7px; border-radius: 2px; background-color: #aba4b4; font-size: 0; }
