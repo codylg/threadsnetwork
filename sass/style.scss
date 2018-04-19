@@ -771,6 +771,20 @@ label {
 
 
 
+article.type-page {
+  max-width: $article-width;
+
+  .entry-header {
+    border-bottom: 2px solid $scheme;
+
+    h1 {
+      margin-top: $page-padding;
+      margin-bottom: $page-padding * 2;
+    }
+  }
+}
+
+
 .single-post {
 
   .entry-header {
