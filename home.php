@@ -18,7 +18,10 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php get_template_part( 'template-parts/fancy-post-list' ); ?>
+		<?php
+		get_template_part( 'template-parts/fancy-post-list' );
+		the_posts_navigation();
+		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

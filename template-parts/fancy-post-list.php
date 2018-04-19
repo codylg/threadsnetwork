@@ -81,8 +81,6 @@ if ( have_posts() ) :
 	</div>
 	<?php
 
-	the_posts_navigation();
-
 else :
 
 	get_template_part( 'template-parts/content', 'none' );
