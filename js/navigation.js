@@ -104,3 +104,10 @@
 		}
 	}( container ) );
 } )();
+
+
+var headerSearch = document.getElementById("page-header-search");
+
+function toggleSearchField() {
+	headerSearch.classList.toggle('hidden');
+}

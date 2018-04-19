@@ -423,9 +423,27 @@ svg.brisbane-logo *.st1 { stroke-width: 2; }
 
 .site-header ul.nav-menu li a { color: #585262; }
 
-.page-header { margin-top: 30px; margin-bottom: 60px; }
+.site-header .site-header-search-toggle { cursor: pointer; }
 
-.page-header h1 { margin: 0; }
+.site-header .site-header-search-toggle .icon-search { position: relative; top: 1px; width: 14px; height: 14px; }
+
+.site-header .site-header-search-toggle .icon-search > * { stroke: #6f6c73; }
+
+.site-header .site-header-search-toggle .icon-search:hover > * { stroke: #443e4e; }
+
+.page-header, .page-header-search { margin-top: 30px; margin-bottom: 60px; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
+
+.page-header h1, .page-header-search h1 { margin: 0; }
+
+.page-header-search { height: 96px; }
+
+.page-header-search.hidden { overflow: hidden; height: 0; margin: 0; }
+
+.page-header-search input.search-field { width: 100%; padding: 0; border: 0; background-color: transparent; box-shadow: none; font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; font-size: 6.4rem; letter-spacing: -0.01em; color: #443e4e; }
+
+.page-header-search input.search-field:focus { box-shadow: none; }
+
+.page-header-search input.search-submit { display: none; }
 
 .content-thumbnails { display: flex; flex-direction: row; flex-wrap: wrap; margin: -7px; }
 
@@ -513,7 +531,7 @@ label { font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; font-
 
 .single-post .entry-header h1 { max-width: 1000px; margin-top: -20px; margin-bottom: 30px; }
 
-.single-post .entry-header .entry-meta { position: relative; z-index: 1; font-family: "minion-pro", Georgia, serif; font-size: 2rem; font-style: italic; color: #6f6c73; }
+.single-post .entry-header .entry-meta { position: relative; z-index: 1; font-family: "minion-pro", Georgia, serif; font-style: italic; font-size: 2rem; color: #6f6c73; }
 
 .single-post .entry-header .entry-meta a { color: #6f6c73; }
 
@@ -531,7 +549,7 @@ label { font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; font-
 
 .single-post .entry-content p { margin: 3em 0; }
 
-.tags-links { font-size: 2rem; font-style: italic; text-align: center; }
+.tags-links { font-style: italic; font-size: 2rem; text-align: center; }
 
 .comments-area { max-width: 850px; padding: 30px; margin: 0 auto; border: 2px solid #cda962; }
 

@@ -399,15 +399,67 @@ svg.brisbane-logo {
       color: $charcoal-light;
     }
   }
+
+  .site-header-search-toggle {
+    cursor: pointer;
+
+    .icon-search {
+      position: relative;
+      top: 1px;
+      width: 14px;
+      height: 14px;
+
+      > * {
+        stroke: $grey;
+      }
+
+      &:hover > * {
+        stroke: $charcoal;
+      }
+    }
+  }
 }
 
 
-.page-header {
+.page-header,
+.page-header-search {
   margin-top: $page-padding;
   margin-bottom: $page-padding * 2;
+  @include transition;
 
   h1 {
     margin: 0;
+  }
+}
+
+.page-header-search {
+  height: 96px;
+
+  &.hidden {
+    overflow: hidden;
+    height: 0;
+    margin: 0;
+  }
+
+  input.search-field {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    box-shadow: none;
+    font-family: $font-header;
+    font-weight: 700;
+    font-size: 6.4rem;
+    letter-spacing: -0.01em;
+    color: $charcoal;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  input.search-submit {
+    display: none;
   }
 }
 
@@ -741,8 +793,8 @@ label {
       position: relative;
       z-index: 1;
       font-family: $font-body;
-      font-size: 2rem;
       font-style: italic;
+      font-size: 2rem;
       color: $grey;
 
       a {
@@ -790,8 +842,8 @@ label {
 
 
 .tags-links {
-  font-size: 2rem;
   font-style: italic;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -934,6 +986,7 @@ label {
     }
   }
 }
+
 
 
 .site-footer {

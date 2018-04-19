@@ -50,6 +50,9 @@
 				<li>
 					<a href="#" target="_blank">Perth</a>
 				</li>
+				<li>
+					<a class="site-header-search-toggle" onclick="toggleSearchField();"><?php get_template_part( 'template-parts/icons/search' );?></a>
+				</li>
 			</ul>
 		</div>
 
@@ -65,3 +68,7 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+
+		<div id="page-header-search" class="page-header-search hidden">
+			<?php get_search_form(); ?>
+		</div>
