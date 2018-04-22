@@ -870,7 +870,8 @@ article.type-page {
   margin: 0 auto;
   border: 2px solid $scheme;
 
-  > *:first-child {
+  > *:first-child,
+  > .comment-respond:first-child h3 {
     margin-top: 0;
   }
 
@@ -926,6 +927,11 @@ article.type-page {
     flex-wrap: wrap;
   }
 
+  .comment-reply-title small a {
+    margin-left: 0.5em;
+    color: $grey-light;
+  }
+
   .comment-form-comment {
     flex-basis: 100%;
 
@@ -956,8 +962,6 @@ article.type-page {
   .comment-form-url {
     display: none;
   }
-
-
 }
 
 

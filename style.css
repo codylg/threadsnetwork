@@ -559,7 +559,7 @@ article.type-page .entry-header h1 { margin-top: 30px; margin-bottom: 60px; }
 
 .comments-area { max-width: 850px; padding: 30px; margin: 0 auto; border: 2px solid #cda962; }
 
-.comments-area > *:first-child { margin-top: 0; }
+.comments-area > *:first-child, .comments-area > .comment-respond:first-child h3 { margin-top: 0; }
 
 .comments-area ol.comment-list { padding: 0; margin: 0; }
 
@@ -582,6 +582,8 @@ article.type-page .entry-header h1 { margin-top: 30px; margin-bottom: 60px; }
 .comments-area ol.comment-list .children { padding-left: 30px; margin-left: 0; border-left: 2px solid #f0eff2; }
 
 .comments-area .comment-form { display: flex; flex-wrap: wrap; }
+
+.comments-area .comment-reply-title small a { margin-left: 0.5em; color: #aba4b4; }
 
 .comments-area .comment-form-comment { flex-basis: 100%; }
 
