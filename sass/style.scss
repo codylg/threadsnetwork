@@ -1016,6 +1016,50 @@ article.type-page {
 
 
 
+// Contact form
+.wpcf7-form {
+  padding: $page-padding * 2;
+  border: 2px solid $scheme;
+
+  p {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+
+    span {
+      flex-basis: 100%;
+    }
+
+    .your-name,
+    .your-email {
+      flex-basis: 40%;
+      flex-grow: 1;
+    }
+
+    .your-name {
+      margin-right: $page-padding / 2;
+    }
+
+    .your-email {
+      margin-left: $page-padding / 2;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    margin-bottom: $page-padding;
+  }
+
+  textarea {
+    max-width: 100%;
+    margin-bottom: $page-padding;
+  }
+}
+
+
+
+
 // Sidebar
 #secondary {
   display: flex;
