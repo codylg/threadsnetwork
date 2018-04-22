@@ -25,10 +25,6 @@
 				<a href="<?php esc_url( get_permalink() ) ?>" class="thumbnail-read-link">Read &rarr;</a>
 			</header><!-- .entry-header -->
 
-			<div class="entry-content">
-				<!-- <?php the_excerpt() ?> -->
-			</div>
-
 		</div>
 
 		<div class="entry-categories">

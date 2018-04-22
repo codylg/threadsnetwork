@@ -18,13 +18,8 @@
 				<?php
 				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 	 			?>
-				<a href="<?php esc_url( get_permalink() ) ?>" class="thumbnail-read-link">Read &rarr;</a>
+				<a href="<?php echo esc_url( get_permalink() ); ?>" class="thumbnail-read-link">Read &rarr;</a>
 			</header><!-- .entry-header -->
-
-			<div class="entry-content">
-				<!-- <?php threadsnetwork_entry_categories(); ?> -->
-				<!-- <?php the_excerpt() ?> -->
-			</div>
 
 		</div>
 
