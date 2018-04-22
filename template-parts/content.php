@@ -58,5 +58,8 @@
 			'after'  => '</div>',
 		) );
 		?>
-		<?php threadsnetwork_entry_footer(); ?>
+		<?php
+		threadsnetwork_entry_footer();
+		get_template_part( 'template-parts/social-links' );
+		?>
 	</div><!-- .entry-content -->

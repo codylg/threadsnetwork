@@ -641,54 +641,82 @@ svg.brisbane-logo {
 
 
 
-
-.mid-content-list-prompt {
-  flex-basis: 100%;
-  flex-grow: 1;
+.newsletter-prompt,
+.social-prompt {
   padding: $page-padding * 2;
-  margin: $page-padding $thumbnail-spacing;
+  margin: $page-padding 0;
   border: 2px solid $scheme;
 
-  &.newsletter-prompt {
-    flex-basis: 50%;
+  h3 {
+    margin-top: 0;
+  }
 
-    h3 {
-      max-width: 190px;
-      margin-top: 0;
-      margin-right: $page-padding * 3;
+  .home-page-content & {
+    flex-basis: 100%;
+    flex-grow: 1;
+    margin-right: $thumbnail-spacing;
+    margin-left: $thumbnail-spacing;
+
+    &.newsletter-prompt {
+      flex-basis: 50%;
     }
 
-    .newsletter-signup-form-details {
-      display: flex;
-      justify-content: center;
+    &.social-prompt {
+      flex-basis: 25%;
+    }
+  }
+}
 
-      > div {
-        flex-grow: 1;
-        max-width: 400px;
-      }
+.newsletter-prompt {
 
-      input {
-        width: 100%;
+  h3 {
+    max-width: 190px;
+    margin-right: $page-padding * 3;
+  }
+
+  .newsletter-signup-form-details {
+    display: flex;
+    justify-content: center;
+
+    > div {
+      flex-grow: 1;
+      max-width: 400px;
+    }
+
+    input {
+      width: 100%;
+    }
+  }
+}
+
+.social-prompt {
+  font-family: $font-body;
+  font-size: 21px;
+  line-height: 1.6em;
+  text-align: center;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin: 1em 0;
+      list-style-type: none;
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
 
-  &.social-prompt {
-    flex-basis: 25%;
-    text-align: center;
-
-    h3 {
-      margin-top: 0;
-    }
-
-    p {
-      font-style: italic;
-      color: $grey-light;
-
-      a {
-        font-style: normal;
-      }
-    }
+  .bt-icon {
+    position: relative;
+    top: 6px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    fill: $charcoal;
   }
 }
 
@@ -866,7 +894,7 @@ article.type-page {
 
 .comments-area {
   max-width: $article-width;
-  padding: $page-padding;
+  padding: $page-padding * 2;
   margin: 0 auto;
   border: 2px solid $scheme;
 

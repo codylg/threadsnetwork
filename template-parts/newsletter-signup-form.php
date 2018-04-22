@@ -7,7 +7,7 @@
 
 ?>
 
-<div id="mc_signup">
+<div id="mc_signup" class="newsletter-prompt">
 	<form method="post" action="#mc_signup" id="mc_signup_form">
 		<input type="hidden" id="mc_submit_type" name="mc_submit_type" value="js">
 		<input type="hidden" name="mcsf_action" value="mc_submit_signup_form">

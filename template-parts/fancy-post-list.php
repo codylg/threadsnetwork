@@ -59,17 +59,9 @@ if ( have_posts() ) :
 					?>
 					</div>
 					</div>
-					<div class="mid-content-list-prompt newsletter-prompt">
 					<?php
 					get_template_part( 'template-parts/newsletter-signup-form' );
-					?>
-					</div>
-					<div class="mid-content-list-prompt social-prompt">
-					<?php
 					get_template_part( 'template-parts/social-links' );
-					?>
-					</div>
-					<?php
 			endif;
 
 		else :
