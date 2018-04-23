@@ -131,6 +131,7 @@ $article-width: 850px;
 $media-large: 1100px;
 $media-medium: 800px;
 $media-small: 600px;
+$media-tiny: 360px;
 
 
 // $font-header: "minion-std-black", serif;
@@ -242,9 +243,9 @@ hr {
     font-family: 'Times', serif;
     font-size: 33px;
     line-height: 0;
+    letter-spacing: 40px;
     text-align: center;
     text-indent: 40px;
-    letter-spacing: 40px;
     color: $scheme;
   }
 }
@@ -535,6 +536,7 @@ svg.brisbane-logo {
 
 .content-thumbnail {
   position: relative;
+  overflow: hidden;
   flex-basis: 30%;
   flex-grow: 1;
   margin: $thumbnail-spacing;
@@ -542,6 +544,13 @@ svg.brisbane-logo {
   background-color: $grey-light;
   font-size: 0;
 
+  @media (max-width: $media-large) {
+    flex-basis: 40%;
+  }
+
+  @media (max-width: $media-medium) {
+    flex-basis: 100%;
+  }
 
   .thumbnail-cover {
     position: absolute;
@@ -570,10 +579,20 @@ svg.brisbane-logo {
     padding-bottom: 0;
     -webkit-font-smoothing: antialiased;
     @include transition;
+
+    @media (max-width: $media-small) {
+      padding-right: $page-padding / 2;
+      padding-left: $page-padding / 2;
+    }
   }
 
   .entry-title {
+    max-width: 600px;
     margin: 0;
+
+    @media (max-width: $media-tiny) {
+      font-size: 3rem;
+    }
 
     a {
       color: $white;
@@ -593,6 +612,10 @@ svg.brisbane-logo {
     font-size: 1.6rem;
     color: $white;
 
+    @media (max-width: $media-medium) {
+      display: none;
+    }
+
     &:hover {
       opacity: 1;
     }
@@ -606,22 +629,26 @@ svg.brisbane-logo {
   background-position: center;
   background-size: cover;
 
+  @media (max-width: $media-medium) {
+    min-height: 500px;
+  }
+
   .entry-details {
     position: relative;
-    padding: $page-padding * 2;
     padding-bottom: $page-padding * 5;
     background: linear-gradient(rgba($charcoal, 0.25), rgba($charcoal, 0));
+
+    @media (min-width: $media-medium) {
+      padding: $page-padding * 2;
+    }
 
     .entry-header {
       display: flex;
     }
 
-    .entry-title {
-      max-width: 600px;
-    }
-
     .thumbnail-read-link {
       flex-grow: 1;
+      padding-left: $page-padding;
       text-align: right;
     }
   }
@@ -634,14 +661,34 @@ svg.brisbane-logo {
 .content-list-three-combo {
   display: flex;
 
+  @media (max-width: $media-medium) {
+    flex-wrap: wrap;
+  }
+
   > .content-thumbnail {
     flex-basis: 66.67%;
+
+    @media (max-width: $media-medium) {
+      flex-basis: 100%;
+    }
   }
 
   .content-list-two-stacked {
     display: flex;
     flex-basis: 33.33%;
     flex-direction: column;
+
+    @media (max-width: $media-large) and (min-width: $media-medium) {
+
+      .thumbnail-cover,
+      .entry-details {
+        display: none;
+      }
+    }
+
+    @media (max-width: $media-medium) {
+      flex-basis: 100%;
+    }
 
     > .content-thumbnail {
       flex-basis: 50%;
@@ -655,25 +702,31 @@ svg.brisbane-logo {
         }
       }
 
-      .thumbnail-cover {
-        opacity: 0;
-      }
+      @media (min-width: $media-medium) {
 
-      .entry-details {
-        opacity: 0;
-        @include prefix(transform, translateY(-5px));
+        .thumbnail-cover {
+          opacity: 0;
+        }
+
+        .entry-details {
+          opacity: 0;
+          @include prefix(transform, translateY(-5px));
+        }
       }
     }
   }
 
-  + .content-list-three-combo {
+  @media (min-width: $media-medium) {
 
-    > .content-thumbnail {
-      order: 2;
-    }
+    + .content-list-three-combo {
 
-    .content-list-two-stacked {
-      order: 1;
+      > .content-thumbnail {
+        order: 2;
+      }
+
+      .content-list-two-stacked {
+        order: 1;
+      }
     }
   }
 }

@@ -371,7 +371,7 @@ p, .entry-content ul, .entry-content ol { font-family: "minion-pro", Georgia, se
 
 hr { height: 2px; margin: 30px 0; background-color: transparent; }
 
-hr::before { content: '...'; display: block; font-family: 'Times', serif; font-size: 33px; line-height: 0; text-align: center; text-indent: 40px; letter-spacing: 40px; color: #cda962; }
+hr::before { content: '...'; display: block; font-family: 'Times', serif; font-size: 33px; line-height: 0; letter-spacing: 40px; text-align: center; text-indent: 40px; color: #cda962; }
 
 blockquote { padding: 0 30px; margin: 0; border-left: 4px solid #cda962; }
 
@@ -462,7 +462,11 @@ svg.brisbane-logo *.st1 { stroke-width: 2; }
 
 .content-thumbnails { display: flex; flex-direction: row; flex-wrap: wrap; margin: -7px; }
 
-.content-thumbnail { position: relative; flex-basis: 30%; flex-grow: 1; margin: 7px; border-radius: 2px; background-color: #aba4b4; font-size: 0; }
+.content-thumbnail { position: relative; overflow: hidden; flex-basis: 30%; flex-grow: 1; margin: 7px; border-radius: 2px; background-color: #aba4b4; font-size: 0; }
+
+@media (max-width: 1100px) { .content-thumbnail { flex-basis: 40%; } }
+
+@media (max-width: 800px) { .content-thumbnail { flex-basis: 100%; } }
 
 .content-thumbnail .thumbnail-cover { position: absolute; z-index: 1; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(68, 62, 78, 0.15); transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); pointer-events: none; }
 
@@ -470,7 +474,11 @@ svg.brisbane-logo *.st1 { stroke-width: 2; }
 
 .content-thumbnail .entry-details { position: absolute; z-index: 2; top: 0; left: 0; width: 100%; padding: 30px; padding-bottom: 0; -webkit-font-smoothing: antialiased; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
 
-.content-thumbnail .entry-title { margin: 0; }
+@media (max-width: 600px) { .content-thumbnail .entry-details { padding-right: 15px; padding-left: 15px; } }
+
+.content-thumbnail .entry-title { max-width: 600px; margin: 0; }
+
+@media (max-width: 360px) { .content-thumbnail .entry-title { font-size: 3rem; } }
 
 .content-thumbnail .entry-title a { color: white; opacity: 0.95; }
 
@@ -478,35 +486,45 @@ svg.brisbane-logo *.st1 { stroke-width: 2; }
 
 .content-thumbnail .thumbnail-read-link { display: block; padding-top: 20px; opacity: 0.8; font-weight: 700; font-size: 1.6rem; color: white; }
 
+@media (max-width: 800px) { .content-thumbnail .thumbnail-read-link { display: none; } }
+
 .content-thumbnail .thumbnail-read-link:hover { opacity: 1; }
 
 .content-thumbnail-large { position: relative; background-position: center; background-size: cover; }
 
-.content-thumbnail-large .entry-details { position: relative; padding: 60px; padding-bottom: 150px; background: linear-gradient(rgba(68, 62, 78, 0.25), rgba(68, 62, 78, 0)); }
+@media (max-width: 800px) { .content-thumbnail-large { min-height: 500px; } }
+
+.content-thumbnail-large .entry-details { position: relative; padding-bottom: 150px; background: linear-gradient(rgba(68, 62, 78, 0.25), rgba(68, 62, 78, 0)); }
+
+@media (min-width: 800px) { .content-thumbnail-large .entry-details { padding: 60px; } }
 
 .content-thumbnail-large .entry-details .entry-header { display: flex; }
 
-.content-thumbnail-large .entry-details .entry-title { max-width: 600px; }
-
-.content-thumbnail-large .entry-details .thumbnail-read-link { flex-grow: 1; text-align: right; }
+.content-thumbnail-large .entry-details .thumbnail-read-link { flex-grow: 1; padding-left: 30px; text-align: right; }
 
 .content-list-three-combo { display: flex; }
 
+@media (max-width: 800px) { .content-list-three-combo { flex-wrap: wrap; } }
+
 .content-list-three-combo > .content-thumbnail { flex-basis: 66.67%; }
 
+@media (max-width: 800px) { .content-list-three-combo > .content-thumbnail { flex-basis: 100%; } }
+
 .content-list-three-combo .content-list-two-stacked { display: flex; flex-basis: 33.33%; flex-direction: column; }
+
+@media (max-width: 1100px) and (min-width: 800px) { .content-list-three-combo .content-list-two-stacked .thumbnail-cover, .content-list-three-combo .content-list-two-stacked .entry-details { display: none; } }
+
+@media (max-width: 800px) { .content-list-three-combo .content-list-two-stacked { flex-basis: 100%; } }
 
 .content-list-three-combo .content-list-two-stacked > .content-thumbnail { flex-basis: 50%; }
 
 .content-list-three-combo .content-list-two-stacked > .content-thumbnail:hover .thumbnail-cover, .content-list-three-combo .content-list-two-stacked > .content-thumbnail:hover .entry-details { opacity: 1; -webkit-transform: none; -moz-transform: none; -ms-transform: none; transform: none; }
 
-.content-list-three-combo .content-list-two-stacked > .content-thumbnail .thumbnail-cover { opacity: 0; }
+@media (min-width: 800px) { .content-list-three-combo .content-list-two-stacked > .content-thumbnail .thumbnail-cover { opacity: 0; }
+  .content-list-three-combo .content-list-two-stacked > .content-thumbnail .entry-details { opacity: 0; -webkit-transform: translateY(-5px); -moz-transform: translateY(-5px); -ms-transform: translateY(-5px); transform: translateY(-5px); } }
 
-.content-list-three-combo .content-list-two-stacked > .content-thumbnail .entry-details { opacity: 0; -webkit-transform: translateY(-5px); -moz-transform: translateY(-5px); -ms-transform: translateY(-5px); transform: translateY(-5px); }
-
-.content-list-three-combo + .content-list-three-combo > .content-thumbnail { order: 2; }
-
-.content-list-three-combo + .content-list-three-combo .content-list-two-stacked { order: 1; }
+@media (min-width: 800px) { .content-list-three-combo + .content-list-three-combo > .content-thumbnail { order: 2; }
+  .content-list-three-combo + .content-list-three-combo .content-list-two-stacked { order: 1; } }
 
 .newsletter-prompt, .social-prompt { padding: 60px; margin: 30px 0; border: 2px solid #cda962; }
 
