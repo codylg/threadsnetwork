@@ -198,8 +198,6 @@ a:hover, a:focus, a:active { color: #28262a; }
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation { clear: both; display: block; float: left; width: 100%; }
-
 .main-navigation ul { display: none; list-style: none; margin: 0; padding-left: 0; }
 
 .main-navigation ul ul { box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); float: left; position: absolute; top: 100%; left: -999em; z-index: 99999; }
@@ -389,39 +387,54 @@ pre { overflow-x: auto; padding: 30px; border-radius: 2px; background-color: #f0
 
 .site-header, .site-content, .site-footer { max-width: 1500px; padding: 0 30px; margin: 0 auto; }
 
+@media (max-width: 800px) { .site-header, .site-content, .site-footer { padding-right: 15px; padding-left: 15px; } }
+
+@media (max-width: 600px) { .site-header, .site-content, .site-footer { padding-right: 7.5px; padding-left: 7.5px; } }
+
 svg.brisbane-logo * { fill: none; stroke: #cda962; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10; stroke-width: 1; }
 
 svg.brisbane-logo *.st1 { stroke-width: 2; }
 
-.site-header { position: relative; z-index: 2; display: flex; flex-wrap: nowrap; width: 100%; padding: 30px; border-top: 4px solid #cda962; }
+.site-header { position: relative; z-index: 2; display: flex; flex-wrap: wrap; width: 100%; padding-top: 30px; padding-bottom: 30px; border-top: 4px solid #cda962; }
 
-.site-header .site-branding { flex-shrink: 0; }
+.site-header .site-branding { flex-shrink: 0; padding-right: 60px; }
+
+@media (max-width: 800px) { .site-header .site-branding { padding-right: 0; } }
 
 .site-header .site-branding svg.brisbane-logo { display: inline-block; width: 33px; margin-right: 10px; }
 
-.site-header .site-branding .site-title { display: inline-block; }
+.site-header .site-branding .site-title { display: inline-block; margin: 0; font-size: 3.4rem; }
 
-.site-header .site-header-links { padding-left: 60px; }
+@media (max-width: 600px) { .site-header .site-branding .site-title { font-size: 3rem; } }
 
-.site-header .site-header-links li:first-child { margin-left: 0; }
+.site-header .site-header-links { padding-right: 30px; }
+
+@media (max-width: 1100px) { .site-header .site-header-links { order: 3; width: 100%; padding-top: 15px; padding-right: 0; margin-top: 15px; border-radius: 2px; border-top: 1px solid #cda962; }
+  .site-header .site-header-links ul li { margin-top: 0; } }
 
 .site-header .site-header-links li { white-space: nowrap; }
 
 .site-header .site-header-links li + li::before { content: '/'; margin-right: 11px; color: #dadce3; }
 
-.site-header .site-title { margin: 0; font-size: 3.4rem; }
+.site-header .main-navigation { flex-grow: 1; }
 
-.site-header .site-header-links ul, .site-header ul.nav-menu { display: flex; padding: 0; margin: 0; }
+@media (max-width: 800px) { .site-header .main-navigation { width: 100%; } }
 
-.site-header .site-header-links ul li, .site-header ul.nav-menu li { float: none; margin: 0; margin-top: 5px; margin-left: 15px; font-family: "sofia-pro", Helvetica, sans-serif; list-style: none; }
+.site-header .main-navigation ul { justify-content: flex-end; }
 
-.site-header .site-header-links ul li a, .site-header ul.nav-menu li a { color: #aba4b4; }
+@media (max-width: 800px) { .site-header .main-navigation ul { justify-content: flex-start; margin-top: 7.5px; } }
 
-.site-header .site-header-links ul li a:hover, .site-header ul.nav-menu li a:hover { color: #443e4e; }
+.site-header .main-navigation ul li a { color: #585262; }
 
-.site-header ul.nav-menu { justify-content: flex-end; }
+.site-header ul { display: flex; padding: 0; margin: 0; }
 
-.site-header ul.nav-menu li a { color: #585262; }
+.site-header ul li { float: none; margin: 0; margin-top: 5px; margin-left: 15px; font-family: "sofia-pro", Helvetica, sans-serif; list-style: none; }
+
+.site-header ul li:first-child { margin-left: 0; }
+
+.site-header ul li a { color: #aba4b4; }
+
+.site-header ul li a:hover { color: #443e4e; }
 
 .site-header .site-header-search-toggle { cursor: pointer; }
 
@@ -430,6 +443,8 @@ svg.brisbane-logo *.st1 { stroke-width: 2; }
 .site-header .site-header-search-toggle .icon-search > * { stroke: #6f6c73; }
 
 .site-header .site-header-search-toggle .icon-search:hover > * { stroke: #443e4e; }
+
+@media (max-width: 800px) { .site-header .site-branding, .site-header .site-header-links ul, .site-header .main-navigation ul { justify-content: center; width: 100%; text-align: center; } }
 
 .page-header, .page-header-search { margin-top: 30px; margin-bottom: 60px; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
 
