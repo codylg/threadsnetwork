@@ -467,17 +467,6 @@ svg.brisbane-logo {
       }
     }
   }
-
-  .site-branding,
-  .site-header-links ul,
-  .main-navigation ul {
-
-    @media (max-width: $media-medium) {
-      justify-content: center;
-      width: 100%;
-      text-align: center;
-    }
-  }
 }
 
 
@@ -763,22 +752,35 @@ svg.brisbane-logo {
   margin: $page-padding 0;
   border: 2px solid $scheme;
 
+  @media (max-width: $media-large) {
+    padding-right: $page-padding;
+    padding-left: $page-padding;
+  }
+
   h3 {
     margin-top: 0;
   }
 
   .home-page-content & {
-    flex-basis: 100%;
     flex-grow: 1;
     margin-right: $thumbnail-spacing;
     margin-left: $thumbnail-spacing;
 
     &.newsletter-prompt {
       flex-basis: 50%;
+
+      @media (max-width: $media-medium) {
+        flex-basis: 100%;
+        margin-bottom: 0;
+      }
     }
 
     &.social-prompt {
       flex-basis: 25%;
+
+      @media (max-width: $media-medium) {
+        flex-basis: 100%;
+      }
     }
   }
 }
@@ -788,11 +790,24 @@ svg.brisbane-logo {
   h3 {
     max-width: 190px;
     margin-right: $page-padding * 3;
+
+    @media (max-width: $media-large) {
+      margin-right: $page-padding;
+    }
+
+    @media (max-width: $media-small) {
+      max-width: none;
+      margin-right: 0;
+    }
   }
 
   .newsletter-signup-form-details {
     display: flex;
     justify-content: center;
+
+    @media (max-width: $media-small) {
+      flex-wrap: wrap;
+    }
 
     > div {
       flex-grow: 1;

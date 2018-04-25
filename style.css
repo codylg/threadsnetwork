@@ -444,8 +444,6 @@ svg.brisbane-logo *.st1 { stroke-width: 2; }
 
 .site-header .site-header-search-toggle .icon-search:hover > * { stroke: #443e4e; }
 
-@media (max-width: 800px) { .site-header .site-branding, .site-header .site-header-links ul, .site-header .main-navigation ul { justify-content: center; width: 100%; text-align: center; } }
-
 .page-header, .page-header-search { margin-top: 30px; margin-bottom: 60px; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
 
 .page-header h1, .page-header-search h1 { margin: 0; }
@@ -528,17 +526,29 @@ svg.brisbane-logo *.st1 { stroke-width: 2; }
 
 .newsletter-prompt, .social-prompt { padding: 60px; margin: 30px 0; border: 2px solid #cda962; }
 
+@media (max-width: 1100px) { .newsletter-prompt, .social-prompt { padding-right: 30px; padding-left: 30px; } }
+
 .newsletter-prompt h3, .social-prompt h3 { margin-top: 0; }
 
-.home-page-content .newsletter-prompt, .home-page-content .social-prompt { flex-basis: 100%; flex-grow: 1; margin-right: 7px; margin-left: 7px; }
+.home-page-content .newsletter-prompt, .home-page-content .social-prompt { flex-grow: 1; margin-right: 7px; margin-left: 7px; }
 
 .home-page-content .newsletter-prompt.newsletter-prompt, .home-page-content .social-prompt.newsletter-prompt { flex-basis: 50%; }
 
+@media (max-width: 800px) { .home-page-content .newsletter-prompt.newsletter-prompt, .home-page-content .social-prompt.newsletter-prompt { flex-basis: 100%; margin-bottom: 0; } }
+
 .home-page-content .newsletter-prompt.social-prompt, .home-page-content .social-prompt.social-prompt { flex-basis: 25%; }
+
+@media (max-width: 800px) { .home-page-content .newsletter-prompt.social-prompt, .home-page-content .social-prompt.social-prompt { flex-basis: 100%; } }
 
 .newsletter-prompt h3 { max-width: 190px; margin-right: 90px; }
 
+@media (max-width: 1100px) { .newsletter-prompt h3 { margin-right: 30px; } }
+
+@media (max-width: 600px) { .newsletter-prompt h3 { max-width: none; margin-right: 0; } }
+
 .newsletter-prompt .newsletter-signup-form-details { display: flex; justify-content: center; }
+
+@media (max-width: 600px) { .newsletter-prompt .newsletter-signup-form-details { flex-wrap: wrap; } }
 
 .newsletter-prompt .newsletter-signup-form-details > div { flex-grow: 1; max-width: 400px; }
 
