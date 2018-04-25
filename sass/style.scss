@@ -1095,6 +1095,15 @@ article.type-page {
   margin: 0 auto;
   border: 2px solid $scheme;
 
+  @media (max-width: $media-small) {
+    padding-right: $page-padding;
+    padding-left: $page-padding;
+  }
+
+  @media (max-width: $media-tiny) {
+    padding: $page-padding ($page-padding / 2);
+  }
+
   > *:first-child,
   > .comment-respond:first-child h3 {
     margin-top: 0;
@@ -1168,20 +1177,27 @@ article.type-page {
 
   .comment-form-author,
   .comment-form-email {
-    flex-basis: 50%;
-    margin: 0;
+    width: 100%;
+
+    @media (min-width: $media-small) {
+      flex-basis: 50%;
+      margin: 0;
+    }
 
     input {
       width: 100%;
     }
   }
 
-  .comment-form-author {
-    padding-right: $page-padding / 2;
-  }
+  @media (min-width: $media-small) {
 
-  .comment-form-email {
-    padding-left: $page-padding / 2;
+    .comment-form-author {
+      padding-right: $page-padding / 2;
+    }
+
+    .comment-form-email {
+      padding-left: $page-padding / 2;
+    }
   }
 
   .comment-form-url {
