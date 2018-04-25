@@ -1217,15 +1217,36 @@ article.type-page {
   font-size: 1.6rem;
   color: $grey-light;
 
+  @media (max-width: $media-medium) {
+    padding-bottom: $page-padding / 2;
+  }
+
+  @media (max-width: $media-small) {
+    padding-bottom: $page-padding / 4;
+  }
+
   .site-footer-content {
     display: flex;
+    flex-wrap: wrap;
     padding: $page-padding * 2;
     border-radius: $radius;
     background-color: $charcoal;
 
+    @media (max-width: $media-small) {
+
+      > * {
+        flex-basis: 100%;
+        text-align: center;
+      }
+    }
+
     svg.brisbane-logo {
       width: 40px;
       margin-right: $page-padding * 2;
+
+      @media (max-width: $media-small) {
+        margin-right: 0;
+      }
 
       * {
         stroke: $grey-light;
@@ -1236,6 +1257,11 @@ article.type-page {
       padding: 0;
       margin: 0;
       margin-right: $page-padding * 3;
+
+      @media (max-width: $media-small) {
+        margin-top: $page-padding;
+        margin-right: 0;
+      }
 
       li {
         list-style-type: none;
@@ -1254,11 +1280,24 @@ article.type-page {
       }
     }
 
+    .menu {
+
+      ul {
+        margin-right: 0;
+      }
+    }
+
     aside {
       flex-grow: 1;
       align-self: flex-end;
+      margin-top: $page-padding;
       font-size: 1.2rem;
       text-align: right;
+
+      @media (max-width: $media-small) {
+        align-self: center;
+        text-align: center;
+      }
     }
   }
 }
