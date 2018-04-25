@@ -450,9 +450,17 @@ svg.brisbane-logo *.st1 { stroke-width: 2; }
 
 .page-header-search { height: 96px; }
 
+@media (max-width: 800px) { .page-header-search { height: 72px; margin-top: 0; } }
+
+@media (max-width: 600px) { .page-header-search { height: 48px; margin-bottom: 30px; } }
+
 .page-header-search.hidden { overflow: hidden; height: 0; margin: 0; }
 
 .page-header-search input.search-field { width: 100%; padding: 0; border: 0; background-color: transparent; box-shadow: none; font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; font-size: 6.4rem; letter-spacing: -0.01em; color: #443e4e; }
+
+@media (max-width: 800px) { .page-header-search input.search-field { font-size: 4.8rem; } }
+
+@media (max-width: 600px) { .page-header-search input.search-field { font-size: 3.2rem; } }
 
 .page-header-search input.search-field:focus { box-shadow: none; }
 
