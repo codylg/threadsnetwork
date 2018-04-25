@@ -195,7 +195,15 @@ h1.big {
 }
 
 h1,
-h2.big,
+h2.big {
+  font-size: 6.4rem;
+  line-height: 1em;
+
+  @media (max-width: $media-small) {
+    font-size: 5.2rem;
+  }
+}
+
 .site-title {
   font-size: 6.4rem;
   line-height: 0.875em;
@@ -476,6 +484,14 @@ svg.brisbane-logo {
   margin-bottom: $page-padding * 2;
   @include transition;
 
+  @media (max-width: $media-medium) {
+    margin-top: 0;
+  }
+
+  @media (max-width: $media-small) {
+    margin-bottom: $page-padding;
+  }
+
   h1 {
     margin: 0;
   }
@@ -486,12 +502,10 @@ svg.brisbane-logo {
 
   @media (max-width: $media-medium) {
     height: 72px;
-    margin-top: 0;
   }
 
   @media (max-width: $media-small) {
     height: 48px;
-    margin-bottom: $page-padding;
   }
 
   &.hidden {

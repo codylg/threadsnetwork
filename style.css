@@ -355,7 +355,11 @@ h1, h2, h3, h4, h5, h6, .site-title { font-family: "sofia-pro", Helvetica, sans-
 
 h1.big { font-size: 8rem; line-height: 1em; }
 
-h1, h2.big, .site-title { font-size: 6.4rem; line-height: 0.875em; }
+h1, h2.big { font-size: 6.4rem; line-height: 1em; }
+
+@media (max-width: 600px) { h1, h2.big { font-size: 5.2rem; } }
+
+.site-title { font-size: 6.4rem; line-height: 0.875em; }
 
 h2 { font-size: 4rem; line-height: 1.2em; }
 
@@ -446,13 +450,17 @@ svg.brisbane-logo *.st1 { stroke-width: 2; }
 
 .page-header, .page-header-search { margin-top: 30px; margin-bottom: 60px; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
 
+@media (max-width: 800px) { .page-header, .page-header-search { margin-top: 0; } }
+
+@media (max-width: 600px) { .page-header, .page-header-search { margin-bottom: 30px; } }
+
 .page-header h1, .page-header-search h1 { margin: 0; }
 
 .page-header-search { height: 96px; }
 
-@media (max-width: 800px) { .page-header-search { height: 72px; margin-top: 0; } }
+@media (max-width: 800px) { .page-header-search { height: 72px; } }
 
-@media (max-width: 600px) { .page-header-search { height: 48px; margin-bottom: 30px; } }
+@media (max-width: 600px) { .page-header-search { height: 48px; } }
 
 .page-header-search.hidden { overflow: hidden; height: 0; margin: 0; }
 
