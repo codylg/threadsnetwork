@@ -502,7 +502,6 @@ svg.brisbane-logo {
 .page-header-search {
   margin-top: $page-padding;
   margin-bottom: $page-padding * 2;
-  @include transition;
 
   @media (max-width: $media-medium) {
     margin-top: 0;
@@ -519,6 +518,7 @@ svg.brisbane-logo {
 
 .page-header-search {
   height: 96px;
+  @include transition($duration: 0.66s);
 
   @media (max-width: $media-medium) {
     height: 72px;
@@ -532,6 +532,7 @@ svg.brisbane-logo {
     overflow: hidden;
     height: 0;
     margin: 0;
+    opacity: 0;
   }
 
   input.search-field {
