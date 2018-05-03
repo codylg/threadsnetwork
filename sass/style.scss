@@ -110,15 +110,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 
 
-//
 #wpadminbar {
-  display: none;
+  position: absolute;
 }
-
-html[lang] {
-  margin-top: 0 !important;
-}
-//
 
 
 
@@ -274,14 +268,14 @@ hr {
     letter-spacing: 40px;
     text-align: center;
     text-indent: 40px;
-    color: $scheme;
+    color: $grey;
   }
 }
 
 blockquote {
   padding: 0 $page-padding;
   margin: 0;
-  border-left: 4px solid $scheme;
+  border-left: 4px solid $grey;
 
   p {
     font-weight: 700;
@@ -302,7 +296,7 @@ pre {
 
 .underline-link,
 .cat-links a,
-.single-post .entry-content a {
+.entry-content a {
   position: relative;
 
   &::before {
@@ -312,14 +306,13 @@ pre {
     bottom: 0.08em;
     left: -1px;
     width: calc(100% + 2px);
-    // height: 0.22em;
     height: 1px;
-    background-color: $scheme;
+    background-color: $grey;
     @include transition;
   }
 
   &:hover::before {
-    background-color: $scheme-dark;
+    height: 2px;
   }
 }
 
@@ -351,7 +344,7 @@ svg.brisbane-logo {
 
   * {
     fill: none;
-    stroke: $scheme;
+    stroke: $grey;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-miterlimit: 10;
@@ -374,7 +367,7 @@ svg.brisbane-logo {
   width: 100%;
   padding-top: $page-padding;
   padding-bottom: $page-padding;
-  border-top: 4px solid $scheme;
+  border-top: 4px solid $grey;
 
   .site-branding {
     flex-shrink: 0;
@@ -411,7 +404,7 @@ svg.brisbane-logo {
       padding-right: 0;
       margin-top: $page-padding / 2;
       border-radius: $radius;
-      border-top: 1px solid $scheme;
+      border-top: 1px solid $grey;
 
       ul li {
         margin-top: 0;
@@ -637,8 +630,9 @@ svg.brisbane-logo {
     }
 
     a {
-      color: $white;
+      display: block;
       opacity: 0.95;
+      color: $white;
 
       &:hover {
         opacity: 1;
@@ -686,6 +680,13 @@ svg.brisbane-logo {
 
     .entry-header {
       display: flex;
+
+      h2 {
+
+        @media (min-width: $media-large) {
+          font-size: 5.6rem;
+        }
+      }
     }
 
     .thumbnail-read-link {
@@ -803,7 +804,7 @@ svg.brisbane-logo {
 .social-prompt {
   padding: $page-padding * 2;
   margin: $page-padding 0;
-  border: 2px solid $scheme;
+  border: 2px solid $grey;
 
   @media (max-width: $media-large) {
     padding-right: $page-padding;
@@ -945,7 +946,7 @@ input[type="search"] {
   }
 
   &:focus {
-    border-color: $scheme;
+    border-color: $grey;
     box-shadow: 0 3px 3px rgba($charcoal, 0.06);
   }
 
@@ -988,7 +989,7 @@ article.type-page {
   max-width: $article-width;
 
   .entry-header {
-    border-bottom: 2px solid $scheme;
+    border-bottom: 2px solid $grey;
 
     h1 {
       margin-top: $page-padding;
@@ -1006,7 +1007,7 @@ article.type-page {
     max-width: $article-width + $page-padding * 4;
     padding: $page-padding * 2;
     margin: -116px auto 0;
-    border-top: 4px solid $scheme;
+    border-top: 4px solid $grey;
     background-color: $off-white;
     text-align: center;
 
@@ -1054,7 +1055,6 @@ article.type-page {
   }
 
   .entry-content {
-    max-width: $article-width;
     margin: 0 auto;
 
     > hr:first-child {
@@ -1065,19 +1065,23 @@ article.type-page {
 
       > p:first-of-type::first-letter {
         margin-right: 0.3em;
-        color: $scheme;
+        color: $grey;
         initial-letter: 3;
         -webkit-initial-letter: 3;
       }
     }
 
-    img {
-      border-radius: $radius;
-    }
-
     p {
       margin: 3em 0;
     }
+  }
+}
+
+.entry-content {
+  max-width: $article-width;
+
+  img {
+    border-radius: $radius;
   }
 }
 
@@ -1094,7 +1098,7 @@ article.type-page {
   max-width: $article-width;
   padding: $page-padding * 2;
   margin: 0 auto;
-  border: 2px solid $scheme;
+  border: 2px solid $grey;
 
   @media (max-width: $media-small) {
     padding-right: $page-padding;
@@ -1234,7 +1238,7 @@ article.type-page {
 // Contact form
 .wpcf7-form {
   padding: $page-padding * 2;
-  border: 2px solid $scheme;
+  border: 2px solid $grey;
 
   @media (max-width: $media-small) {
     padding: $page-padding;
@@ -1293,7 +1297,7 @@ article.type-page {
   flex-wrap: wrap;
   padding: $page-padding / 2;
   margin-top: $page-padding;
-  border: 2px solid $scheme;
+  border: 2px solid $grey;
 
   section {
     flex-grow: 1;

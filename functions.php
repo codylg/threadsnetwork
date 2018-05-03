@@ -193,3 +193,82 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+
+// Theme customisations
+
+function theme_customize_register( $wp_customize ) {
+
+	// Accent color
+  $wp_customize->add_setting( 'accent_color', array(
+    'default'   => '',
+    'transport' => 'refresh',
+    'sanitize_callback' => 'sanitize_hex_color',
+  ) );
+
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'accent_color', array(
+    'section' => 'colors',
+    'label'   => esc_html__( 'Accent colour', 'theme' ),
+  ) ) );
+}
+
+add_action( 'customize_register', 'theme_customize_register' );
+
+function theme_get_customizer_css() {
+	ob_start();
+
+	$accent_color = get_theme_mod( 'accent_color', '' );
+	if ( ! empty( $accent_color ) ) {
+		?>
+		.site-header,
+		.newsletter-prompt,
+		.social-prompt,
+		blockquote,
+		textarea:focus,
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="url"]:focus,
+		input[type="search"]:focus,
+		article.type-page .entry-header,
+		.single-post .entry-header,
+		.comments-area,
+		.wpcf7-form,
+		#secondary {
+			border-color: <?php echo $accent_color; ?>;
+		}
+
+		svg.brisbane-logo * {
+			stroke: <?php echo $accent_color; ?>;
+		}
+
+		hr::before {
+			color: <?php echo $accent_color; ?>;
+		}
+
+		.underline-link::before,
+		.cat-links a::before,
+		.entry-content a::before {
+			background-color: <?php echo $accent_color; ?>;
+		}
+
+		@supports ((initial-letter: 1) or (-webkit-initial-letter: 1)) {
+
+			.single-post .entry-content > p:first-of-type::first-letter {
+				color: <?php echo $accent_color; ?>;
+			}
+		}
+
+		/* $media-large */
+		@media (max-width: 1100px) {
+
+			.site-header .site-header-links {
+				border-color: <?php echo $accent_color; ?>;
+			}
+		}
+		<?php
+	}
+
+	$css = ob_get_clean();
+	return $css;
+}
