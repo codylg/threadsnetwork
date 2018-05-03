@@ -12,7 +12,8 @@
 
   <?php
   wp_nav_menu( array(
-    'theme_location' => 'social-links'
+    'theme_location' => 'social-links',
+    'menu_class' => 'social-links'
   ) );
   ?>
 

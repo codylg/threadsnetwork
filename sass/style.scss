@@ -894,6 +894,9 @@ svg.brisbane-logo {
       }
     }
   }
+}
+
+.social-links {
 
   a {
 
@@ -927,16 +930,25 @@ svg.brisbane-logo {
       content: '\e063';
     }
   }
+}
 
-  // .bt-icon {
-  //   position: relative;
-  //   top: 6px;
-  //   display: inline-block;
-  //   width: 24px;
-  //   height: 24px;
-  //   margin-right: 5px;
-  //   fill: $charcoal;
-  // }
+.social-links-icons {
+
+  li {
+    display: inline-block;
+
+    + li {
+      margin-left: 10px;
+    }
+  }
+
+  a {
+    font-size: 0;
+
+    &::before {
+      padding-right: 0;
+    }
+  }
 }
 
 textarea,
@@ -1432,11 +1444,18 @@ article.type-page {
       flex-grow: 1;
       align-self: flex-end;
       margin-top: $page-padding;
+      margin-left: $page-padding;
       font-size: 1.2rem;
       text-align: right;
 
+      .social-links {
+        padding-bottom: $page-padding;
+        margin-right: 0;
+      }
+
       @media (max-width: $media-small) {
         align-self: center;
+        margin-left: 0;
         text-align: center;
       }
     }

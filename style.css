@@ -586,15 +586,23 @@ svg.brisbane-logo *.st1 { stroke-width: 2; }
 
 .social-prompt ul li:last-child { margin-bottom: 0; }
 
-.social-prompt a::before { padding-right: 10px; font-family: 'Socicon'; speak: none; font-weight: normal; font-style: normal; font-variant: normal; font-size: 16px; line-height: 1; text-transform: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.social-links a::before { padding-right: 10px; font-family: 'Socicon'; speak: none; font-weight: normal; font-style: normal; font-variant: normal; font-size: 16px; line-height: 1; text-transform: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
-.social-prompt a[href*="instagram"]::before { content: '\e044'; }
+.social-links a[href*="instagram"]::before { content: '\e044'; }
 
-.social-prompt a[href*="facebook"]::before { content: '\e028'; }
+.social-links a[href*="facebook"]::before { content: '\e028'; }
 
-.social-prompt a[href*="twitter"]::before { content: '\e08d'; }
+.social-links a[href*="twitter"]::before { content: '\e08d'; }
 
-.social-prompt a[href*="pinterest"]::before { content: '\e063'; }
+.social-links a[href*="pinterest"]::before { content: '\e063'; }
+
+.social-links-icons li { display: inline-block; }
+
+.social-links-icons li + li { margin-left: 10px; }
+
+.social-links-icons a { font-size: 0; }
+
+.social-links-icons a::before { padding-right: 0; }
 
 textarea, input, input[type="text"], input[type="email"], input[type="url"], input[type="search"], input[type="submit"] { padding: 0; margin: 0; border: 0; border-radius: 0; background-color: transparent; font-family: "sofia-pro", Helvetica, sans-serif; font-size: 1.6rem; color: #443e4e; outline: none; -webkit-appearance: none; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
 
@@ -761,6 +769,8 @@ article.type-page .entry-header h1 { margin-top: 30px; margin-bottom: 60px; }
 
 .site-footer .site-footer-content .menu ul { margin-right: 0; }
 
-.site-footer .site-footer-content aside { flex-grow: 1; align-self: flex-end; margin-top: 30px; font-size: 1.2rem; text-align: right; }
+.site-footer .site-footer-content aside { flex-grow: 1; align-self: flex-end; margin-top: 30px; margin-left: 30px; font-size: 1.2rem; text-align: right; }
 
-@media (max-width: 600px) { .site-footer .site-footer-content aside { align-self: center; text-align: center; } }
+.site-footer .site-footer-content aside .social-links { padding-bottom: 30px; margin-right: 0; }
+
+@media (max-width: 600px) { .site-footer .site-footer-content aside { align-self: center; margin-left: 0; text-align: center; } }

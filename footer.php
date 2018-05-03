@@ -33,7 +33,15 @@
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
-			<aside><span>&copy; Threads Network. All rights reserved.</span></aside>
+			<aside>
+				<?php
+			  wp_nav_menu( array(
+			    'theme_location' => 'social-links',
+					'menu_class' => 'social-links social-links-icons'
+			  ) );
+			  ?>
+				<span>&copy; Threads Network. All rights reserved.</span>
+			</aside>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
