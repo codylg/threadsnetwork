@@ -424,7 +424,7 @@ svg.brisbane-logo *.st1 { stroke-width: 2; }
 
 .site-header .site-header-links li { white-space: nowrap; }
 
-.site-header .site-header-links li + li::before { content: '/'; margin-right: 11px; color: #dadce3; }
+.site-header .site-header-links li.search-item::before, .site-header .site-header-links li + li::before { content: '/'; margin-right: 11px; color: #dadce3; }
 
 .site-header .main-navigation { flex-grow: 1; }
 

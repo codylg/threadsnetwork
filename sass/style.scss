@@ -414,6 +414,7 @@ svg.brisbane-logo {
     li {
       white-space: nowrap;
 
+      &.search-item::before,
       + li::before {
         content: '/';
         margin-right: 11px;

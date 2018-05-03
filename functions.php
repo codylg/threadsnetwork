@@ -70,18 +70,6 @@ if ( ! function_exists( 'threadsnetwork_setup' ) ) :
 		}
 		add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'threadsnetwork' ),
-		) );
-
-
-		add_filter( 'wp_nav_menu_items','add_search_box', 10, 2 );
-			function add_search_box( $items, $args ) {
-			$items .= '<li>' . get_search_form( false ) . '</li>';
-			return $items;
-		}
-
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -272,3 +260,23 @@ function theme_get_customizer_css() {
 	$css = ob_get_clean();
 	return $css;
 }
+
+
+
+function wpb_custom_new_menu() {
+  register_nav_menus(
+    array(
+			'pages-menu' => esc_html__( 'Primary', 'threadsnetwork' ),
+      'cities-header-menu' => __( 'Cities header' ),
+      'cities-footer-menu' => __( 'Cities footer' ),
+      'social-links' => __( 'Social links' )
+    )
+  );
+}
+add_action( 'init', 'wpb_custom_new_menu' );
+
+// add_filter( 'wp_nav_menu_items','add_search_box', 10, 2 );
+// 	function add_search_box( $items, $args ) {
+// 	$items .= '<li>' . get_search_form( false ) . '</li>';
+// 	return $items;
+// }

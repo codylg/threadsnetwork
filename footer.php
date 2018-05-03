@@ -22,23 +22,14 @@
 					?>
 				</a>
 			</div>
-			<ul>
-				<li>
-					<a href="#" target="_blank">Melbourne Threads</a>
-				</li>
-				<li>
-					<a href="#" target="_blank">Sydney Threads</a>
-				</li>
-				<li>
-					<a href="#" target="_blank">Brisbane Threads</a>
-				</li>
-				<li>
-					<a href="#" target="_blank">Perth Threads</a>
-				</li>
-			</ul>
 			<?php
 			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
+				'theme_location' => 'cities-footer-menu'
+			) );
+			?>
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'pages-menu',
 				'menu_id'        => 'primary-menu',
 			) );
 			?>

@@ -8,8 +8,15 @@
 ?>
 
 <div class="social-prompt">
-  <h3>Brisbane Threads social</h3>
-  <ul>
+  <h3>Check out our socials</h3>
+
+  <?php
+  wp_nav_menu( array(
+    'theme_location' => 'social-links'
+  ) );
+  ?>
+
+  <!-- <ul>
     <li>
       <?php get_template_part( 'template-parts/icons/instagram' );?>
       <a class="underline-link" href="https://instagram.com/brisbanethreads" target="_blank">@brisbanethreads</a>
@@ -26,5 +33,5 @@
       <?php get_template_part( 'template-parts/icons/pinterest' );?>
       <a class="underline-link" href="http://pinterest.com/brisbanethreads" target="_blank">@brisbanethreads</a>
     </li>
-  </ul>
+  </ul> -->
 </div>
