@@ -895,15 +895,48 @@ svg.brisbane-logo {
     }
   }
 
-  .bt-icon {
-    position: relative;
-    top: 6px;
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-right: 5px;
-    fill: $charcoal;
+  a {
+
+    &::before {
+      padding-right: 10px;
+      font-family: 'Socicon';
+      speak: none;
+      font-weight: normal;
+      font-style: normal;
+      font-variant: normal;
+      font-size: 16px;
+      line-height: 1;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    &[href*="instagram"]::before {
+      content: '\e044';
+    }
+
+    &[href*="facebook"]::before {
+      content: '\e028';
+    }
+
+    &[href*="twitter"]::before {
+      content: '\e08d';
+    }
+
+    &[href*="pinterest"]::before {
+      content: '\e063';
+    }
   }
+
+  // .bt-icon {
+  //   position: relative;
+  //   top: 6px;
+  //   display: inline-block;
+  //   width: 24px;
+  //   height: 24px;
+  //   margin-right: 5px;
+  //   fill: $charcoal;
+  // }
 }
 
 textarea,
@@ -1075,6 +1108,13 @@ article.type-page {
     p {
       margin: 3em 0;
     }
+  }
+
+  .social-prompt {
+    max-width: $article-width;
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 

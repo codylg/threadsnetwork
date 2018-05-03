@@ -23,6 +23,9 @@
 		<?php echo theme_get_customizer_css(); ?>
 	</style>
 
+	<!-- Social icon font -->
+	<link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d" />
+
 </head>
 
 <body <?php body_class(); ?>>
