@@ -35,7 +35,8 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
-			get_template_part( 'template-parts/brisbane-logo' );
+			get_template_part( 'template-parts/city-logos' );
+
 			if ( is_front_page() && is_home() ) :
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

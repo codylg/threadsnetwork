@@ -1,3 +1,8 @@
+<?php
+$blogname = get_bloginfo( 'name' );
+
+if (strpos($blogname, 'Brisbane') !== false) :
+?>
 <svg class="brisbane-logo" x="0px" y="0px" viewBox="0 0 26 20" style="enable-background:new 0 0 26 20;">
 	<polyline class="st0" points="19,19 13,12.4 19,1.4 "/>
 	<line class="st0" x1="1" y1="19" x2="1" y2="11.3"/>
@@ -11,3 +16,23 @@
 	<line class="st0" x1="1.3" y1="4" x2="4.7" y2="2"/>
 	<line class="st0" x1="4.7" y1="4" x2="1.3" y2="2"/>
 </svg>
+
+<?php
+
+elseif (strpos($blogname, 'Melbourne') !== false) :
+?>
+Melbourne
+
+<?php
+
+elseif (strpos($blogname, 'Sydney') !== false) :
+?>
+Sydney
+
+<?php
+
+elseif (strpos($blogname, 'Perth') !== false) :
+?>
+Perth
+
+<?php endif; ?>

@@ -18,7 +18,7 @@
 			<div>
 				<a href="#">
 					<?php
-					get_template_part( 'template-parts/brisbane-logo' );
+					get_template_part( 'template-parts/city-logos' );
 					?>
 				</a>
 			</div>
