@@ -349,10 +349,6 @@ svg.city-logo {
     stroke-linejoin: round;
     stroke-miterlimit: 10;
     // stroke-width: 1;
-
-    &.st1 {
-      // stroke-width: 2;
-    }
   }
 }
 
@@ -1371,6 +1367,35 @@ article.type-page {
     > h2:first-child {
       margin-top: 0;
     }
+  }
+}
+
+
+
+
+// Instagram community feed
+.ff-stream {
+  padding-top: $page-padding;
+  padding-bottom: 0;
+
+  .ff-header {
+    display: none;
+  }
+
+  .ff-stream-wrapper {
+    margin: 0;
+  }
+
+  a::before {
+    display: none;
+  }
+
+  .ff-has-overlay .ff-initial-image {
+    transition-duration: 0.33s;
+  }
+
+  .ff-has-overlay:hover .ff-initial-image {
+    @include prefix(transform, scale(1.05));
   }
 }
 

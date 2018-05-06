@@ -741,6 +741,18 @@ article.type-page .entry-header h1 { margin-top: 30px; margin-bottom: 60px; }
 
 #secondary section > h2:first-child { margin-top: 0; }
 
+.ff-stream { padding-top: 30px; padding-bottom: 0; }
+
+.ff-stream .ff-header { display: none; }
+
+.ff-stream .ff-stream-wrapper { margin: 0; }
+
+.ff-stream a::before { display: none; }
+
+.ff-stream .ff-has-overlay .ff-initial-image { transition-duration: 0.33s; }
+
+.ff-stream .ff-has-overlay:hover .ff-initial-image { -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
+
 .site-footer { padding-bottom: 30px; margin-top: 30px; font-size: 1.6rem; color: #aba4b4; }
 
 @media (max-width: 800px) { .site-footer { padding-bottom: 15px; } }
