@@ -226,7 +226,7 @@ function theme_get_customizer_css() {
 			border-color: <?php echo $accent_color; ?>;
 		}
 
-		svg.brisbane-logo * {
+		svg.city-logo * {
 			stroke: <?php echo $accent_color; ?>;
 		}
 

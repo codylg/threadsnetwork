@@ -340,7 +340,7 @@ pre {
 
 
 
-svg.brisbane-logo {
+svg.city-logo {
 
   * {
     fill: none;
@@ -348,10 +348,10 @@ svg.brisbane-logo {
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-miterlimit: 10;
-    stroke-width: 1;
+    // stroke-width: 1;
 
     &.st1 {
-      stroke-width: 2;
+      // stroke-width: 2;
     }
   }
 }
@@ -377,7 +377,7 @@ svg.brisbane-logo {
       padding-right: 0;
     }
 
-    svg.brisbane-logo {
+    svg.city-logo {
       display: inline-block;
       width: 33px;
       margin-right: 10px;
@@ -1405,7 +1405,7 @@ article.type-page {
       }
     }
 
-    svg.brisbane-logo {
+    svg.city-logo {
       width: 40px;
       margin-right: $page-padding * 2;
 
