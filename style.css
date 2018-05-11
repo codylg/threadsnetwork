@@ -753,7 +753,7 @@ article.type-page .entry-header h1 { margin-top: 30px; margin-bottom: 60px; }
 
 .ff-stream .ff-has-overlay:hover .ff-initial-image { -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
 
-.ff-stream#ff-stream-1 .ff-loadmore-wrapper .ff-btn { margin-top: 15px; background-color: #f0eff2; text-transform: none; color: #443e4e; }
+.ff-stream#ff-stream-1 .ff-loadmore-wrapper .ff-btn { margin-top: 30px; background-color: #f0eff2; text-transform: none; color: #443e4e; }
 
 .site-footer { padding-bottom: 30px; margin-top: 30px; font-size: 1.6rem; color: #aba4b4; }
 
