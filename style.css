@@ -426,6 +426,8 @@ svg.city-logo * { fill: none; stroke: #6f6c73; stroke-linecap: round; stroke-lin
 
 .site-header .site-header-links li.search-item:first-child::before { display: none; }
 
+.home.page .site-header .site-header-links li.search-item { display: none; }
+
 .site-header .main-navigation { flex-grow: 1; }
 
 @media (max-width: 800px) { .site-header .main-navigation { width: 100%; } }

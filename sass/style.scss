@@ -416,8 +416,15 @@ svg.city-logo {
         color: $grey-lighter;
       }
 
-      &.search-item:first-child::before {
-        display: none;
+      &.search-item {
+
+        &:first-child::before {
+          display: none;
+        }
+
+        .home.page & {
+          display: none;
+        }
       }
     }
   }
