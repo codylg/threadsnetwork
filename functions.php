@@ -70,6 +70,17 @@ if ( ! function_exists( 'threadsnetwork_setup' ) ) :
 		}
 		add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
+		//Exclude pages from WordPress Search
+		if (!is_admin()) {
+			function wpb_search_filter($query) {
+				if ($query->is_search) {
+					$query->set('post_type', 'post');
+				}
+				return $query;
+			}
+			add_filter('pre_get_posts','wpb_search_filter');
+		}
+
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
