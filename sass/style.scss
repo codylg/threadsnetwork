@@ -1427,6 +1427,51 @@ article.type-page {
 
 
 
+// Event calendar
+
+.em-calendar-wrapper {
+  overflow: auto;
+  // max-width: 100%;
+}
+
+table.fullcalendar.em-calendar {
+  table-layout: fixed;
+  min-width: 800px;
+
+  thead {
+
+  }
+
+  tbody {
+
+  }
+
+  tr {
+
+  }
+
+  td {
+    vertical-align: top;
+
+    &.eventful {
+
+      a {
+        color: inherit;
+      }
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+  }
+}
+
+// table.em-calendar td.eventful a, table.em-calendar td.eventful-today a
+
+
+
 .site-footer {
   padding-bottom: $page-padding;
   margin-top: $page-padding;
