@@ -81,6 +81,8 @@ if ( ! function_exists( 'threadsnetwork_setup' ) ) :
 			add_filter('pre_get_posts','wpb_search_filter');
 		}
 
+		update_option( 'link_manager_enabled', 0 );
+
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
