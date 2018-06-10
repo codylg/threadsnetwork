@@ -4,17 +4,19 @@ $blogname = get_bloginfo( 'name' );
 if (strpos($blogname, 'Brisbane') !== false) :
 ?>
 <svg class="city-logo" x="0px" y="0px" viewBox="0 0 26 20" style="enable-background:new 0 0 26 20;">
-	<polyline id="Stroke-1" stroke="#010101" points="19 19 13 12.4 19 1.4"></polyline>
-	<path d="M1,19 L1,11.3" id="Stroke-3" stroke="#010101"></path>
-	<polygon id="Stroke-5" stroke="#010101" points="7 9 1 15.6 7 19"></polygon>
-	<polygon id="Stroke-7" stroke="#010101" points="13 5.8999 7 14.5999 13 18.9999"></polygon>
-	<polyline id="Stroke-9" stroke="#010101" points="19 19 25 12.4 19 1.4"></polyline>
-	<path d="M25,5.8999 L25,18.9999" id="Stroke-11" stroke="#010101"></path>
-	<path d="M25,5.2002 C21.3,2.9002 19,1.0002 19,1.0002 L19,19.0002 L25,19.0002" id="Stroke-13" stroke="#010101" stroke-width="2"></path>
-	<path d="M1,19 L19,19 L19,1 C19,1 11.4,7.5 1,10.9" id="Stroke-15" stroke="#010101" stroke-width="2"></path>
-	<path d="M3,1 L3,5" id="Stroke-17" stroke="#000000"></path>
-	<path d="M1.2998,4 L4.6998,2" id="Stroke-19" stroke="#000000"></path>
-	<path d="M4.7002,4 L1.3002,2" id="Stroke-21" stroke="#000000"></path>
+	<g id="brisbane" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+		<polyline id="Stroke-1" stroke="#010101" points="19 19 13 12.4 19 1.4"></polyline>
+		<path d="M1,19 L1,11.3" id="Stroke-3" stroke="#010101"></path>
+		<polygon id="Stroke-5" stroke="#010101" points="7 9 1 15.6 7 19"></polygon>
+		<polygon id="Stroke-7" stroke="#010101" points="13 5.8999 7 14.5999 13 18.9999"></polygon>
+		<polyline id="Stroke-9" stroke="#010101" points="19 19 25 12.4 19 1.4"></polyline>
+		<path d="M25,5.8999 L25,18.9999" id="Stroke-11" stroke="#010101"></path>
+		<path d="M25,5.2002 C21.3,2.9002 19,1.0002 19,1.0002 L19,19.0002 L25,19.0002" id="Stroke-13" stroke="#010101" stroke-width="2"></path>
+		<path d="M1,19 L19,19 L19,1 C19,1 11.4,7.5 1,10.9" id="Stroke-15" stroke="#010101" stroke-width="2"></path>
+		<path d="M3,1 L3,5" id="Stroke-17" stroke="#000000"></path>
+		<path d="M1.2998,4 L4.6998,2" id="Stroke-19" stroke="#000000"></path>
+		<path d="M4.7002,4 L1.3002,2" id="Stroke-21" stroke="#000000"></path>
+	</g>
 </svg>
 
 <?php
@@ -44,22 +46,24 @@ elseif (strpos($blogname, 'Melbourne') !== false) :
 elseif (strpos($blogname, 'Sydney') !== false) :
 ?>
 <svg class="city-logo" x="0px" y="0px" viewBox="0 0 26 20" style="enable-background:new 0 0 26 20;">
-	<path d="M6,14 L25.5,14" id="Line" stroke="#000000"></path>
-	<path d="M7,11 L10,14" id="Line" stroke="#000000"></path>
-	<path d="M10,7 L15,10" id="Line" stroke="#000000"></path>
-	<path d="M15,4 L20,8" id="Line" stroke="#000000"></path>
-	<path d="M20,2 L25,7" id="Line" stroke="#000000"></path>
-	<path d="M25,1 L25,14" id="Line" stroke="#000000"></path>
-	<path d="M20,2 L20,14" id="Line" stroke="#000000"></path>
-	<path d="M15,4 L15,14" id="Line" stroke="#000000"></path>
-	<path d="M10,7 L10,14" id="Line" stroke="#000000"></path>
-	<path d="M6,19 L6,11 C10.9048308,5.67668223 17.5909637,1.27988919 25,1" id="Combined-Shape" stroke="#000000" stroke-width="2"></path>
-	<path d="M6.5,19 C10.2714844,12.2817383 16.751709,7 25,7" id="Combined-Shape" stroke="#000000"></path>
-	<path d="M3,1 L3,5" id="Stroke-17" stroke="#010101" stroke-linejoin="round"></path>
-	<path d="M3,10.5 L3,11.5" id="Stroke-17" stroke="#010101" stroke-linejoin="round"></path>
-	<path d="M1.2998,4 L4.6998,2" id="Stroke-19" stroke="#010101" stroke-linejoin="round"></path>
-	<path d="M4.7002,4 L1.3002,2" id="Stroke-21" stroke="#010101" stroke-linejoin="round"></path>
-	<polyline id="Path-3" stroke="#000000" points="0.5 19.5 0.5 10 1.5 8 4.5 8 5.5 10 5.5 19"></polyline>
+	<g id="sydney" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+		<path d="M6,14 L25.5,14" id="Line" stroke="#000000"></path>
+		<path d="M7,11 L10,14" id="Line" stroke="#000000"></path>
+		<path d="M10,7 L15,10" id="Line" stroke="#000000"></path>
+		<path d="M15,4 L20,8" id="Line" stroke="#000000"></path>
+		<path d="M20,2 L25,7" id="Line" stroke="#000000"></path>
+		<path d="M25,1 L25,14" id="Line" stroke="#000000"></path>
+		<path d="M20,2 L20,14" id="Line" stroke="#000000"></path>
+		<path d="M15,4 L15,14" id="Line" stroke="#000000"></path>
+		<path d="M10,7 L10,14" id="Line" stroke="#000000"></path>
+		<path d="M6,19 L6,11 C10.9048308,5.67668223 17.5909637,1.27988919 25,1" id="Combined-Shape" stroke="#000000" stroke-width="2"></path>
+		<path d="M6.5,19 C10.2714844,12.2817383 16.751709,7 25,7" id="Combined-Shape" stroke="#000000"></path>
+		<path d="M3,1 L3,5" id="Stroke-17" stroke="#010101" stroke-linejoin="round"></path>
+		<path d="M3,10.5 L3,11.5" id="Stroke-17" stroke="#010101" stroke-linejoin="round"></path>
+		<path d="M1.2998,4 L4.6998,2" id="Stroke-19" stroke="#010101" stroke-linejoin="round"></path>
+		<path d="M4.7002,4 L1.3002,2" id="Stroke-21" stroke="#010101" stroke-linejoin="round"></path>
+		<polyline id="Path-3" stroke="#000000" points="0.5 19.5 0.5 10 1.5 8 4.5 8 5.5 10 5.5 19"></polyline>
+	</g>
 </svg>
 
 <?php
