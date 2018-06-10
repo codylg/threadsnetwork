@@ -342,12 +342,13 @@ pre {
 
 svg.city-logo {
 
-  * {
+  *[stroke] {
     fill: none;
     stroke: $grey;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-miterlimit: 10;
+  }
+
+  *[fill] {
+    fill: $grey;
   }
 }
 
@@ -1509,8 +1510,12 @@ table.fullcalendar.em-calendar {
         margin-right: 0;
       }
 
-      * {
+      *[stroke] {
         stroke: $grey-light;
+      }
+
+      *[fill] {
+        fill: $grey-light;
       }
     }
 

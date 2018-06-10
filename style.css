@@ -401,7 +401,9 @@ pre { overflow-x: auto; padding: 30px; border-radius: 2px; background-color: #f0
 
 @media (max-width: 600px) { .site-header, .site-content, .site-footer { padding-right: 7.5px; padding-left: 7.5px; } }
 
-svg.city-logo * { fill: none; stroke: #6f6c73; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10; }
+svg.city-logo *[stroke] { fill: none; stroke: #6f6c73; }
+
+svg.city-logo *[fill] { fill: #6f6c73; }
 
 .site-header { position: relative; z-index: 2; display: flex; flex-wrap: wrap; width: 100%; padding-top: 30px; padding-bottom: 30px; border-top: 4px solid #6f6c73; }
 
@@ -783,7 +785,9 @@ table.fullcalendar.em-calendar td ul { padding: 0; margin: 0; list-style-type: n
 
 @media (max-width: 600px) { .site-footer .site-footer-content svg.city-logo { margin-right: 0; } }
 
-.site-footer .site-footer-content svg.city-logo * { stroke: #aba4b4; }
+.site-footer .site-footer-content svg.city-logo *[stroke] { stroke: #aba4b4; }
+
+.site-footer .site-footer-content svg.city-logo *[fill] { fill: #aba4b4; }
 
 .site-footer .site-footer-content ul { padding: 0; margin: 0; margin-right: 90px; }
 

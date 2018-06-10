@@ -239,8 +239,11 @@ function theme_get_customizer_css() {
 			border-color: <?php echo $accent_color; ?>;
 		}
 
-		svg.city-logo * {
+		svg.city-logo *[stroke] {
 			stroke: <?php echo $accent_color; ?>;
+		}
+		svg.city-logo *[fill] {
+			fill: <?php echo $accent_color; ?>;
 		}
 
 		hr::before {
