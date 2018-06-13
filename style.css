@@ -765,11 +765,43 @@ article.type-page .entry-header h1 { margin-top: 30px; margin-bottom: 60px; }
 
 table.fullcalendar.em-calendar { table-layout: fixed; min-width: 800px; }
 
+table.fullcalendar.em-calendar a::before { display: none; }
+
+table.fullcalendar.em-calendar thead td { padding-bottom: 20px; border: 0; }
+
+table.fullcalendar.em-calendar thead td.month_name { text-align: center; }
+
+table.fullcalendar.em-calendar thead td:last-child { text-align: right; }
+
+table.fullcalendar.em-calendar thead td a { font-size: 0; }
+
+table.fullcalendar.em-calendar thead td a::after { content: '\2190'; font-size: 2rem; color: #aba4b4; }
+
+table.fullcalendar.em-calendar thead td a.em-calnav-prev::after { content: '\2190'; }
+
+table.fullcalendar.em-calendar thead td a.em-calnav-next::after { content: '\2192'; }
+
+table.fullcalendar.em-calendar tbody td { height: 120px; padding: 5px; border: 1px solid #f0eff2; background-color: white; }
+
+table.fullcalendar.em-calendar tr.days-names td { height: auto; padding-bottom: 15px; border: 0; background-color: transparent; text-align: center; color: #6f6c73; }
+
 table.fullcalendar.em-calendar td { vertical-align: top; }
 
-table.fullcalendar.em-calendar td.eventful a { color: inherit; }
+table.fullcalendar.em-calendar td.eventful > a, table.fullcalendar.em-calendar td.eventful-today > a { pointer-events: none; }
+
+table.fullcalendar.em-calendar td.eventful a, table.fullcalendar.em-calendar td.eventful-today a { font-weight: 400; color: inherit; }
+
+table.fullcalendar.em-calendar td.eventful-today, table.fullcalendar.em-calendar td.eventless-today { border: 2px solid #443e4e; background-color: white; }
+
+table.fullcalendar.em-calendar td.eventful-pre, table.fullcalendar.em-calendar td.eventless-pre, table.fullcalendar.em-calendar td.eventful-post, table.fullcalendar.em-calendar td.eventless-post { background-color: transparent; }
 
 table.fullcalendar.em-calendar td ul { padding: 0; margin: 0; list-style-type: none; }
+
+table.fullcalendar.em-calendar td ul li { margin-top: 5px; border-radius: 2px; background-color: #f0eff2; font-size: 1.4rem; line-height: 1.2em; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
+
+table.fullcalendar.em-calendar td ul li:hover { background-color: #dadce3; }
+
+table.fullcalendar.em-calendar td ul li a { display: block; padding: 5px; }
 
 .site-footer { padding-bottom: 30px; margin-top: 30px; font-size: 1.6rem; color: #aba4b4; }
 

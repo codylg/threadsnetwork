@@ -1432,44 +1432,130 @@ article.type-page {
 
 .em-calendar-wrapper {
   overflow: auto;
-  // max-width: 100%;
 }
 
 table.fullcalendar.em-calendar {
   table-layout: fixed;
   min-width: 800px;
 
+  a::before {
+    display: none;
+  }
+
   thead {
 
+    td {
+      padding-bottom: 20px;
+      border: 0;
+
+      &.month_name {
+        text-align: center;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+
+      a {
+        font-size: 0;
+
+        &::after {
+          content: '\2190';
+          font-size: 2rem;
+          color: $grey-light;
+        }
+
+        &.em-calnav-prev::after {
+          content: '\2190';
+        }
+
+        &.em-calnav-next::after {
+          content: '\2192';
+        }
+      }
+    }
   }
 
   tbody {
+
+    td {
+      height: 120px;
+      padding: 5px;
+      border: 1px solid $grey-lightest;
+      background-color: $white;
+    }
 
   }
 
   tr {
 
+    &.days-names {
+
+      td {
+        height: auto;
+        padding-bottom: 15px;
+        border: 0;
+        background-color: transparent;
+        text-align: center;
+        color: $grey;
+      }
+    }
   }
 
   td {
     vertical-align: top;
 
-    &.eventful {
+    &.eventful,
+    &.eventful-today {
+
+      > a {
+        pointer-events: none;
+      }
 
       a {
+        font-weight: 400;
         color: inherit;
       }
+    }
+
+    &.eventful-today,
+    &.eventless-today {
+      border: 2px solid $charcoal;
+      background-color: $white;
+    }
+
+    &.eventful-pre,
+    &.eventless-pre,
+    &.eventful-post,
+    &.eventless-post {
+      background-color: transparent;
     }
 
     ul {
       padding: 0;
       margin: 0;
       list-style-type: none;
+
+      li {
+        margin-top: 5px;
+        border-radius: $radius;
+        background-color: $grey-lightest;
+        font-size: 1.4rem;
+        line-height: 1.2em;
+        @include transition;
+
+        &:hover {
+          background-color: $grey-lighter;
+        }
+
+        a {
+          display: block;
+          padding: 5px;
+        }
+      }
     }
   }
 }
-
-// table.em-calendar td.eventful a, table.em-calendar td.eventful-today a
 
 
 

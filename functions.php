@@ -235,6 +235,8 @@ function theme_get_customizer_css() {
 		.single-post .entry-header,
 		.comments-area,
 		.wpcf7-form,
+		table.fullcalendar.em-calendar td.eventful-today,
+    table.fullcalendar.em-calendar td.eventless-today,
 		#secondary {
 			border-color: <?php echo $accent_color; ?>;
 		}
