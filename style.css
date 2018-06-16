@@ -622,7 +622,7 @@ textarea:hover, input[type="text"]:hover, input[type="email"]:hover, input[type=
 
 textarea:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus { border-color: #6f6c73; box-shadow: 0 3px 3px rgba(68, 62, 78, 0.06); }
 
-textarea + input, input[type="text"] + input, input[type="email"] + input, input[type="url"] + input, input[type="search"] + input { margin-top: 24px; }
+textarea ~ input, input[type="text"] ~ input, input[type="email"] ~ input, input[type="url"] ~ input, input[type="search"] ~ input { margin-top: 24px; }
 
 input[type="submit"], .comment-reply-link, .ff-stream .ff-loadmore-wrapper .ff-btn { padding: 6px 11px; border-radius: 2px; background-color: #f0eff2; font-weight: 700; font-size: 1.5rem; line-height: 1.4em; letter-spacing: 0.02em; color: #585262; cursor: pointer; }
 

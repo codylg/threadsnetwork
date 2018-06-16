@@ -1016,7 +1016,7 @@ input[type="search"] {
     box-shadow: 0 3px 3px rgba($charcoal, 0.06);
   }
 
-  + input {
+  ~ input {
     margin-top: 24px;
   }
 }
