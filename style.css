@@ -630,11 +630,17 @@ input[type="submit"]:hover, .comment-reply-link:hover, .ff-stream .ff-loadmore-w
 
 label { font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; font-size: 1.6rem; color: #6f6c73; }
 
-article.type-page { max-width: 850px; }
+article.type-page, article.type-event { max-width: 850px; margin: 0 auto; }
 
-article.type-page .entry-header { border-bottom: 2px solid #6f6c73; }
+article.type-page .entry-header, article.type-event .entry-header { margin-bottom: 30px; border-bottom: 2px solid #6f6c73; }
 
-article.type-page .entry-header h1 { margin-top: 30px; margin-bottom: 60px; }
+article.type-page .entry-header h1, article.type-event .entry-header h1 { margin-top: 30px; margin-bottom: 60px; }
+
+article.type-page .entry-content, article.type-event .entry-content { margin: 0 auto; }
+
+article.type-page .post-thumbnail, article.type-event .post-thumbnail { margin-bottom: 30px; }
+
+article.type-page .post-thumbnail img, article.type-event .post-thumbnail img { width: 100%; border-radius: 2px; }
 
 .single-post .entry-header { position: relative; box-sizing: border-box; max-width: 970px; padding: 60px; margin: -116px auto 0; border-top: 4px solid #6f6c73; background-color: #fbfafc; text-align: center; }
 

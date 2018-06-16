@@ -232,6 +232,7 @@ function theme_get_customizer_css() {
 		input[type="url"]:focus,
 		input[type="search"]:focus,
 		article.type-page .entry-header,
+		article.type-event .entry-header,
 		.single-post .entry-header,
 		.comments-area,
 		.wpcf7-form,
