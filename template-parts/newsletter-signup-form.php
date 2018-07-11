@@ -26,7 +26,7 @@ endif;
 ?>
 
 <div id="mc_embed_signup" class="newsletter-prompt">
-  <form action="<?php echo $listaction ?>;" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+  <form action="<?php echo $listaction; ?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll" class="newsletter-signup-form-details">
       <h3>Sign up to our newsletter</h3>
       <div>
