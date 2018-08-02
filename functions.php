@@ -41,8 +41,8 @@ if ( ! function_exists( 'threadsnetwork_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-		set_post_thumbnail_size( 800, 800, true );
-		add_image_size( 'thumb-large', 1400, 1000, true );
+		set_post_thumbnail_size( 700, 700, true );
+		add_image_size( 'thumb-large', 1200, 850, true );
 
 		/**
 		 * Filter the except length.
