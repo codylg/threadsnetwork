@@ -3,6 +3,7 @@ $blogname = get_bloginfo( 'name' );
 
 if (strpos($blogname, 'Brisbane') !== false) :
 ?>
+
 <svg class="city-logo" x="0px" y="0px" viewBox="0 0 26 20" style="enable-background:new 0 0 26 20;">
 	<g id="brisbane" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
 		<polyline id="Stroke-1" stroke="#010101" points="19 19 13 12.4 19 1.4"></polyline>
@@ -20,7 +21,6 @@ if (strpos($blogname, 'Brisbane') !== false) :
 </svg>
 
 <?php
-
 elseif (strpos($blogname, 'Melbourne') !== false) :
 ?>
 <svg class="city-logo" x="0px" y="0px" viewBox="0 0 26 20" style="enable-background:new 0 0 26 20;">
@@ -42,7 +42,6 @@ elseif (strpos($blogname, 'Melbourne') !== false) :
 </svg>
 
 <?php
-
 elseif (strpos($blogname, 'Sydney') !== false) :
 ?>
 <svg class="city-logo" x="0px" y="0px" viewBox="0 0 26 20" style="enable-background:new 0 0 26 20;">
@@ -67,7 +66,6 @@ elseif (strpos($blogname, 'Sydney') !== false) :
 </svg>
 
 <?php
-
 elseif (strpos($blogname, 'Perth') !== false) :
 ?>
 <svg class="city-logo" x="0px" y="0px" viewBox="0 0 26 20" style="enable-background:new 0 0 26 20;">
@@ -87,6 +85,17 @@ elseif (strpos($blogname, 'Perth') !== false) :
 	<polyline id="Line" stroke="#000000" stroke-linecap="square" points="21.5 7 13 3 4.5 7"></polyline>
 	<circle id="Oval-2" fill="#000000" cx="13" cy="7" r="1"></circle>
 	<path d="M13.6000004,3.70000005 L5.5,7.5" id="Line" stroke="#000000" stroke-linecap="square"></path>
+</svg>
+
+<?php
+elseif (strpos($blogname, 'Network') !== false) :
+?>
+<svg class="city-logo" x="0px" y="0px" viewBox="0 0 26 20" style="enable-background:new 0 0 26 20;">
+	<g id="threads" stroke="#010101" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+		<path id="Stroke-17" d="M13,6v8"/>
+		<path id="Stroke-19" d="M9.6,12l6.8-4"/>
+		<path id="Stroke-21" d="M16.4,12L9.6,8"/>
+	</g>
 </svg>
 
 <?php endif; ?>
