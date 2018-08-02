@@ -55,9 +55,17 @@
 					'theme_location' => 'cities-header-menu'
 				) );
 				?>
+
+				<?php
+				$blogname = get_bloginfo( 'name' );
+				if (strpos($blogname, 'Network') == false) :
+				?>
 				<li class="search-item">
 					<a class="site-header-search-toggle" onclick="toggleSearchField();"><?php get_template_part( 'template-parts/icons/search' );?></a>
 				</li>
+				<?php endif; ?>
+
+
 			</ul>
 		</div>
 

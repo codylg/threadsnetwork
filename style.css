@@ -428,8 +428,6 @@ svg.city-logo *[fill] { fill: #6f6c73; }
 
 .site-header .site-header-links li.search-item:first-child::before { display: none; }
 
-.home.page .site-header .site-header-links li.search-item { display: none; }
-
 .site-header .main-navigation { flex-grow: 1; }
 
 @media (max-width: 800px) { .site-header .main-navigation { width: 100%; } }

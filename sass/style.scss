@@ -422,10 +422,6 @@ svg.city-logo {
         &:first-child::before {
           display: none;
         }
-
-        .home.page & {
-          display: none;
-        }
       }
     }
   }
