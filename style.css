@@ -488,13 +488,13 @@ form.search-form input.search-submit { margin-top: 15px; }
 
 .content-thumbnails { display: flex; flex-direction: row; flex-wrap: wrap; margin: -7px; }
 
-.content-thumbnail { position: relative; overflow: hidden; flex-basis: 30%; flex-grow: 1; margin: 7px; border-radius: 2px; background-color: #aba4b4; font-size: 0; }
+.content-thumbnail { position: relative; overflow: hidden; flex-basis: 30%; min-height: 330px; flex-grow: 1; margin: 7px; border-radius: 2px; background-color: #dadce3; font-size: 0; }
 
-@media (max-width: 1100px) { .content-thumbnail { flex-basis: 40%; } }
+@media (max-width: 1100px) { .content-thumbnail { flex-basis: 40%; min-height: 230px; } }
 
 @media (max-width: 800px) { .content-thumbnail { flex-basis: 100%; } }
 
-.content-thumbnail .thumbnail-cover { position: absolute; z-index: 1; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(68, 62, 78, 0.15); transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); pointer-events: none; }
+.content-thumbnail .thumbnail-cover { position: absolute; z-index: 1; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(68, 62, 78, 0.2); transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); pointer-events: none; }
 
 .content-thumbnail img.wp-post-image { width: 100%; border-radius: 2px; }
 
@@ -520,7 +520,7 @@ form.search-form input.search-submit { margin-top: 15px; }
 
 @media (max-width: 800px) { .content-thumbnail-large { min-height: 500px; } }
 
-.content-thumbnail-large .entry-details { position: relative; padding-bottom: 150px; background: linear-gradient(rgba(68, 62, 78, 0.25), rgba(68, 62, 78, 0)); }
+.content-thumbnail-large .entry-details { position: relative; padding-bottom: 180px; background: linear-gradient(rgba(68, 62, 78, 0.28), rgba(68, 62, 78, 0)); }
 
 @media (min-width: 800px) { .content-thumbnail-large .entry-details { padding: 60px; } }
 
@@ -530,7 +530,7 @@ form.search-form input.search-submit { margin-top: 15px; }
 
 .content-thumbnail-large .entry-details .thumbnail-read-link { flex-grow: 1; padding-left: 30px; text-align: right; }
 
-.content-list-three-combo { display: flex; }
+.content-list-three-combo { display: flex; width: 100%; }
 
 @media (max-width: 800px) { .content-list-three-combo { flex-wrap: wrap; } }
 
