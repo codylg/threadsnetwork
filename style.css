@@ -783,6 +783,8 @@ article.type-page .post-thumbnail img, article.type-event .post-thumbnail img { 
 
 table.fullcalendar.em-calendar { table-layout: fixed; min-width: 800px; }
 
+@media (max-width: 600px) { table.fullcalendar.em-calendar { min-width: 0; } }
+
 table.fullcalendar.em-calendar a::before { display: none; }
 
 table.fullcalendar.em-calendar thead td { padding-bottom: 20px; border: 0; }
@@ -800,6 +802,14 @@ table.fullcalendar.em-calendar thead td a.em-calnav-prev::after { content: '\219
 table.fullcalendar.em-calendar thead td a.em-calnav-next::after { content: '\2192'; }
 
 table.fullcalendar.em-calendar tbody td { height: 120px; padding: 5px; border: 1px solid #f0eff2; background-color: white; }
+
+@media (max-width: 600px) { table.fullcalendar.em-calendar tbody td { display: block; height: auto; min-width: 300px; padding-top: 0; padding-right: 0; padding-bottom: 30px; padding-left: 0; border: 0; background-color: transparent; }
+  table.fullcalendar.em-calendar tbody td.eventful ul li { font-size: 2rem; }
+  table.fullcalendar.em-calendar tbody td.eventless-today { border: 0; background-color: transparent; }
+  table.fullcalendar.em-calendar tbody td.eventless::after, table.fullcalendar.em-calendar tbody td.eventless-today::after { content: 'No events'; display: block; margin-top: 10px; font-style: italic; color: #6f6c73; }
+  table.fullcalendar.em-calendar tbody td.eventful-pre, table.fullcalendar.em-calendar tbody td.eventful-post, table.fullcalendar.em-calendar tbody td.eventless-pre, table.fullcalendar.em-calendar tbody td.eventless-post { display: none; } }
+
+@media (max-width: 600px) { table.fullcalendar.em-calendar tr.days-names { display: none; } }
 
 table.fullcalendar.em-calendar tr.days-names td { height: auto; padding-bottom: 15px; border: 0; background-color: transparent; text-align: center; color: #6f6c73; }
 

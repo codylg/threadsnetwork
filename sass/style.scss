@@ -1492,6 +1492,10 @@ table.fullcalendar.em-calendar {
   table-layout: fixed;
   min-width: 800px;
 
+  @media (max-width: $media-small) {
+    min-width: 0;
+  }
+
   a::before {
     display: none;
   }
@@ -1537,13 +1541,53 @@ table.fullcalendar.em-calendar {
       padding: 5px;
       border: 1px solid $grey-lightest;
       background-color: $white;
-    }
 
+      @media (max-width: $media-small) {
+        display: block;
+        height: auto;
+        min-width: 300px;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 30px;
+        padding-left: 0;
+        border: 0;
+        background-color: transparent;
+
+        &.eventful ul li {
+          font-size: 2rem;
+        }
+
+        &.eventless-today {
+          border: 0;
+          background-color: transparent;
+        }
+
+        &.eventless::after,
+        &.eventless-today::after {
+          content: 'No events';
+          display: block;
+          margin-top: 10px;
+          font-style: italic;
+          color: $grey;
+        }
+
+        &.eventful-pre,
+        &.eventful-post,
+        &.eventless-pre,
+        &.eventless-post {
+          display: none;
+        }
+      }
+    }
   }
 
   tr {
 
     &.days-names {
+
+      @media (max-width: $media-small) {
+        display: none;
+      }
 
       td {
         height: auto;
