@@ -1046,6 +1046,10 @@ label {
   color: $grey;
 }
 
+#mce-responses {
+  margin-top: 1em;
+}
+
 
 
 
@@ -1378,6 +1382,37 @@ article.type-event {
   textarea {
     max-width: 100%;
     margin-bottom: $page-padding;
+  }
+
+  span {
+    font-family: $font-sans;
+
+    &.wpcf7-not-valid-tip {
+      margin-top: -20px;
+      margin-bottom: 30px;
+      font-size: 1.2rem;
+      color: rgb(245, 80, 90);
+    }
+  }
+
+  span.ajax-loader {
+    margin-top: 10px;
+    margin-left: 0;
+    background-repeat: no-repeat;
+  }
+
+  .wpcf7-response-output,
+  .wpcf7-validation-errors,
+  .wpcf7-acceptance-missing {
+    padding: 15px 20px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  .wpcf7-mail-sent-ok {
+    border-color: rgb(110, 225, 130);
   }
 }
 

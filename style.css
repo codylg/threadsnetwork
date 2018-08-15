@@ -628,6 +628,8 @@ input[type="submit"]:hover, .comment-reply-link:hover, .ff-stream .ff-loadmore-w
 
 label { font-family: "sofia-pro", Helvetica, sans-serif; font-weight: 700; font-size: 1.6rem; color: #6f6c73; }
 
+#mce-responses { margin-top: 1em; }
+
 article.type-page, article.type-event { max-width: 850px; margin: 0 auto; }
 
 article.type-page .entry-header, article.type-event .entry-header { margin-bottom: 30px; border-bottom: 2px solid #6f6c73; }
@@ -746,6 +748,16 @@ article.type-page .post-thumbnail img, article.type-event .post-thumbnail img { 
 .wpcf7-form input[type="text"], .wpcf7-form input[type="email"] { width: 100%; margin-bottom: 30px; }
 
 .wpcf7-form textarea { max-width: 100%; margin-bottom: 30px; }
+
+.wpcf7-form span { font-family: "sofia-pro", Helvetica, sans-serif; }
+
+.wpcf7-form span.wpcf7-not-valid-tip { margin-top: -20px; margin-bottom: 30px; font-size: 1.2rem; color: #f5505a; }
+
+.wpcf7-form span.ajax-loader { margin-top: 10px; margin-left: 0; background-repeat: no-repeat; }
+
+.wpcf7-form .wpcf7-response-output, .wpcf7-form .wpcf7-validation-errors, .wpcf7-form .wpcf7-acceptance-missing { padding: 15px 20px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; }
+
+.wpcf7-form .wpcf7-mail-sent-ok { border-color: #6ee182; }
 
 #secondary { display: flex; flex-wrap: wrap; padding: 15px; margin-top: 30px; border: 2px solid #6f6c73; }
 
