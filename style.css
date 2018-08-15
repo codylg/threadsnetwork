@@ -640,7 +640,9 @@ article.type-page .post-thumbnail, article.type-event .post-thumbnail { margin-b
 
 article.type-page .post-thumbnail img, article.type-event .post-thumbnail img { width: 100%; border-radius: 2px; }
 
-.single-post .entry-header { position: relative; box-sizing: border-box; max-width: 970px; padding: 60px; margin: -116px auto 0; border-top: 4px solid #6f6c73; background-color: #fbfafc; text-align: center; }
+.single-post .post-thumbnail + .entry-header { margin-top: -116px; border-top: 4px solid #6f6c73; }
+
+.single-post .entry-header { position: relative; box-sizing: border-box; max-width: 970px; padding: 60px; margin: 0 auto; background-color: #fbfafc; text-align: center; }
 
 @media (max-width: 1100px) { .single-post .entry-header { max-width: none; margin-top: 0; } }
 

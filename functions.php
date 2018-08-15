@@ -233,7 +233,7 @@ function theme_get_customizer_css() {
 		input[type="search"]:focus,
 		article.type-page .entry-header,
 		article.type-event .entry-header,
-		.single-post .entry-header,
+		.single-post .post-thumbnail + .entry-header,
 		.comments-area,
 		.wpcf7-form,
 		table.fullcalendar.em-calendar td.eventful-today,

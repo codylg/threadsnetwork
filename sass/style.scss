@@ -1083,13 +1083,17 @@ article.type-event {
 
 .single-post {
 
+  .post-thumbnail + .entry-header {
+    margin-top: -116px;
+    border-top: 4px solid $grey;
+  }
+
   .entry-header {
     position: relative;
     box-sizing: border-box;
     max-width: $article-width + $page-padding * 4;
     padding: $page-padding * 2;
-    margin: -116px auto 0;
-    border-top: 4px solid $grey;
+    margin: 0 auto;
     background-color: $off-white;
     text-align: center;
 
